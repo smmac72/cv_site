@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    {% if title %}
+        <title>{{_('zeromac')}} | {{ title }}</title>
+    {% else %}
+        <title>{{_('zeromac')}}</title>
+    {% endif %}
+</head>
+<body>
+    <a href="{{ url_for(request.endpoint, lang_code='en') }}">en</a>
+    <a href="{{ url_for(request.endpoint, lang_code='ru') }}">ru</a>
+    <p>hahahahahha cum</p>
+</body>
+</html>
