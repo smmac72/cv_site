@@ -18,7 +18,6 @@ def get_locale():
             app.config['LANGUAGES']) or app.config['LANGUAGES'][0]
     return g.lang_code
 
-
 @app.route('/')
 def home():
     if not g.get('lang_code', None):

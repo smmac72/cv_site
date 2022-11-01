@@ -1,19 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
-    {% if title %}
-        <title>{{_('zeromac')}} | {{ title }}</title>
-    {% else %}
-        <title>{{_('zeromac')}}</title>
-    {% endif %}
-</head>
-<body>
-    <a href="{{ url_for(request.endpoint, lang_code='en') }}">en</a>
-    <a href="{{ url_for(request.endpoint, lang_code='ru') }}">ru</a>
-    <p>hahahahahha cum</p>
-</body>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/vertical-offset.css') }}">
+      <style>
+        @font-face {
+          font-family: CyberFont;
+          src: url("{{ url_for('static', filename='fonts/cyberfont.otf') }}");
+          font-weight: bold;
+        }
+      </style>
+
+      {% if title %}
+          <title>{{_('zeromac')}} | {{ title }}</title>
+      {% else %}
+          <title>{{_('zeromac')}}</title>
+      {% endif %}
+  </head>
+
+  <body scroll="no" style="overflow: hidden">
+    <div class="container-fluid">
+      <div class="row d-flex align-items-center">
+        <div class="col-12 col-sm-4">
+          <div class="container">
+            <div class="col-12 d-flex justify-content-end offset-lg-1">
+              <div class="container">
+                <div class="row col-12 justify-content-center text-nowrap" id="menu-header">
+                    {{_("it's me, zeromac!")}}
+                </div>
+                <div class="row col-12 justify-content-end" id="menu-header-sub">
+                  {{_('or just Oleg')}}
+                </div>
+              </div>
+          </div>
+            <div class="col-12">
+              <div id="menu-items">
+                <div class="menu-item">professional info</div>
+                <div class="menu-item">personal info</div>
+                <div class="menu-item">contact me</div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-8">
+            <div id="game">
+                <img id="game-background"></img>
+                <img class="row quest-star" id="star-orange"></img>
+                <img class="row quest-star" id="star-green"></img>
+                <img class="row quest-star" id="star-red"></img>
+                <img class="quest-star" id="star-pink"></img>
+                <img class="quest-star" id="star-blue"></img>
+                <img class="quest-star" id="star-turquoise"></img>
+                <img class="quest-star" id="star-purple"></img>
+            </div>
+          </div>
+        </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+      <script src="jquery.fittext.js"></script>
+      <script>
+        jQuery("#responsive_headline").fitText();
+      </script>
+    </body>
+
+  <footer>
+      {% if g.lang_code == "ru" %}
+        <a class="btn btn-dark" href="{{ url_for(request.endpoint, lang_code='en') }}" role="button">EN</a>
+        {% else %}
+        <a class="btn btn-dark" href="{{ url_for(request.endpoint, lang_code='ru') }}" role="button">RU</a>
+        {% endif %}
+  </footer>
 </html>
