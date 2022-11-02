@@ -12,9 +12,10 @@
   }
   
   #menu-items {
+    margin-top: 3vh;
+    padding-bottom: 8vh;
     font-family: CyberFont;
     font-size: 1vw;
-    margin-left: clamp(1rem, 5vw, 12rem);
     position: relative;
     z-index: 1;
   }
@@ -28,19 +29,18 @@
   }
 
   #menu-header {
-    font-size: 2vw;
+    font-size: 4.7vw;
+    margin-top: 5vh;
     color: green;
     font-family: CyberFont;
     text-decoration: none;
-
-    flex: 0 0 auto;
-    width: 100%;
-
+    position: relative;
     z-index: 1;
   }
 
   #menu-header-sub {
-    font-size: 0.7vw;
+    position: relative;
+    font-size: 2.5vw;
     color: green;
     opacity: 0.5;
     font-family: CyberFont;
@@ -49,10 +49,12 @@
   
   .menu-item {
     font-family: CyberFont;
-    font-size: 1.5vw;
+    padding-top: 1vh;
+    font-size: 2.6vw;
     color: green;
     opacity: 0.6;
     cursor: pointer;
+    text-decoration: none;
     transition: opacity 400ms ease;
   }
   
@@ -68,7 +70,23 @@
   }
 
   #game {
-    position: sticky;
+    position: relative;
+  }
+  #game-warning-mobile {
+    opacity: 0;
+    position: relative;
+    font-family: CyberFont;
+    font-size: 3.5vw;
+    color: green;
+  }
+  #game-warning-pc {
+    position: absolute;
+    opacity: 0;
+    font-family: CyberFont;
+    font-size: 2vw;
+    bottom: 10%;
+    left: 40%;
+    color: green;
   }
   #game-background {
     width: 100vw;
@@ -88,9 +106,9 @@
     
     opacity: 1;
 
-    -webkit-animation:star-anim 0.5s infinite;
+    -webkit-animation:star-anim 1s infinite;
     -webkit-animation-fill-mode: forwards;
-    animation:star-anim 0.5s infinite;
+    animation:star-anim 1s infinite;
     animation-fill-mode: forwards;
   }
   @-webkit-keyframes star-anim { 
@@ -100,46 +118,110 @@
     100% { content: url('img/star1.png'); }
   }
 
+  .quest-star.off {
+    opacity: 0;
+  }
+
+  .button-star {
+    cursor: pointer;
+  }
   #star-orange {
     filter: invert(11%) sepia(80%) saturate(6576%) hue-rotate(2deg) brightness(103%) contrast(119%);
-    top: 10%;
-    left: 65.4%;
   }
 
   #star-green {
     filter: invert(55%) sepia(85%) saturate(3464%) hue-rotate(86deg) brightness(125%) contrast(121%);
-    top: 15%;
-    left: 65.4%;
   }
 
   #star-red {
     filter: invert(98%) sepia(36%) saturate(7268%) hue-rotate(356deg) brightness(109%) contrast(102%);
-    top: 20%;
-    left: 65.4%;
   }
 
   #star-pink {
     filter: invert(30%) sepia(95%) saturate(5831%) hue-rotate(294deg) brightness(112%) contrast(131%);
-    top: 25%;
-    left: 65.4%;
   }
 
   #star-blue {
     filter: invert(47%) sepia(78%) saturate(3051%) hue-rotate(191deg) brightness(101%) contrast(101%);
-    top: 30%;
-    left: 50%;
   }
 
   #star-turquoise {
     filter: invert(61%) sepia(94%) saturate(289%) hue-rotate(125deg) brightness(103%) contrast(93%);
-    top: 35%;
-    left: 65.4%;
   }
 
   #star-purple {
     filter: invert(36%) sepia(98%) saturate(7380%) hue-rotate(279deg) brightness(80%) contrast(126%);
-    top: 40%;
-    left: 65.4%;
+  }
+
+  .desc-overlay {
+    -webkit-overflow-scrolling: touch;
+    z-index: 1;
+
+    position: absolute;
+    background: rgba(0, 0, 0, 0.228);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vh;
+    width: 100vw;
+  }
+
+  .desc-overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .desc-wrapper {
+    margin: 70px auto;
+    padding: 20px;
+    background-color: rgba(0, 128, 0, 0.228);
+    border-radius: 5px;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+
+  .desc-wrapper h2 {
+    margin-top: 0;
+    color: green;
+    font-family: CyberFont;
+  }
+
+  .desc-wrapper .desc-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: green;
+  }
+  .desc-wrapper .desc-close:hover {
+    opacity: 0.6;
+  }
+
+  .desc-wrapper .desc-content {
+    max-height: 30%;
+    overflow: auto;
+  }
+
+  .desc-textbox {
+    border-radius: 10px;
+    position: relative;
+    font-family: Queulat;
+    color: white;
+    background-color: rgba(0, 64, 0, 0.8);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding: 20px 50;
+  }
+
+  .desc-image {
+    float:right;
   }
 
   footer {
@@ -149,40 +231,240 @@
     height: 40px;
   }
 
-  /* 
-  adaptive stuff bruh
+/* 
+  adaptive stuff for star buttons bruh
+  le kostyl below
 */
+@media screen and (max-width: 992px) {
+  #game-warning-mobile {
+    opacity: 1;
+  }
+  #game-warning-pc {
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  #game-warning-mobile {
+    opacity: 0;
+  }
+  #game-warning-pc {
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 540px) {
-  #menu-header {
-      text-align: center;
-      margin-top: 20%;
+  .quest-star {
+    width: 1vw;
+  }
+  #star-orange {
+    top: 41%;
+    left: 95.5%;
+  }
+  #star-green {
+    top: 42%;
+    left: 79%;
+  }
+  #star-red {
+    top: 75%;
+    left: 60%;
+  }
+  #star-pink {
+    top: 65%;
+    left: 116%;
+  }
+  #star-blue {
+    top: 40%;
+    left: 24%;
+  }
+  #star-turquoise {
+    top: 57%;
+    left: 36.5%;
+  }
+  #star-purple {
+    top: 43%;
+    left: 132%;
   }
 }
 @media screen and (min-width: 540px) and (max-width: 720px) {
-  #menu-header {
-    text-align: center;
-    margin-top: 10em;
+  .quest-star {
+    width: 0.8vw;
+  }
+  #star-orange {
+    top: 41%;
+    left: 94.5%;
+  }
+  #star-green {
+    top: 42%;
+    left: 78%;
+  }
+  #star-red {
+    top: 75%;
+    left: 59%;
+  }
+  #star-pink {
+    top: 65%;
+    left: 115%;
+  }
+  #star-blue {
+    top: 40%;
+    left: 23%;
+  }
+  #star-turquoise {
+    top: 57%;
+    left: 35.5%;
+  }
+  #star-purple {
+    top: 43%;
+    left: 131%;
   }
 }
-@media screen and (min-width: 720px) and (max-width: 960px) {
-  #menu-header {
-    text-align: center;
-    margin-top: 8em;
+@media screen and (min-width: 720px) and (max-width: 992px) {
+  .quest-star {
+    width: 0.7vw;
+  }
+  #star-orange {
+    top: 41%;
+    left: 93.5%;
+  }
+  #star-green {
+    top: 42%;
+    left: 77%;
+  }
+  #star-red {
+    top: 75%;
+    left: 58%;
+  }
+  #star-pink {
+    top: 65%;
+    left: 114%;
+  }
+  #star-blue {
+    top: 40%;
+    left: 22%;
+  }
+  #star-turquoise {
+    top: 57%;
+    left: 34.5%;
+  }
+  #star-purple {
+    top: 43%;
+    left: 130%;
   }
 }
-@media screen and (min-width: 960px) and (max-width: 1140px) {
+@media screen and (min-width: 992px) and (max-width: 1140px) {
+  .quest-star {
+    width: 0.65vw;
+  }
+  #star-orange {
+    top: 41%;
+    left: 92.25%;
+  }
+  #star-green {
+    top: 42%;
+    left: 76%;
+  }
+  #star-red {
+    top: 76%;
+    left: 56.5%;
+  }
+  #star-pink {
+    top: 68%;
+    left: 83.25%;
+  }
+  #star-blue {
+    top: 40%;
+    left: 21%;
+  }
+  #star-turquoise {
+    top: 57%;
+    left: 33.5%;
+  }
+  #star-purple {
+    top: 61%;
+    left: 56%;
+  }
+}
+@media screen and (min-width: 992px) {
   #menu-header {
-    right: 0;
-    margin-top: 3em;
+    font-size: 3.5vw;
+    margin-top: 30%;
+  }
+  #menu-header-sub {
+    font-size: 1vw;
+    margin-bottom: 5%;
+  }
+  .menu-item {
+    font-size: 1.7vw;
+  }
+  #game-warning {
+    font-size: 2vw;
+    position: absolute;
+    margin-top: 50%;
+    margin-left: 15%;
   }
 }
 @media screen and (min-width: 1140px) and (max-width: 1320px) {
-  #menu-header {
-    margin-top: 2em;
+  .quest-star {
+    width: 0.6vw;
+  }
+  #star-orange {
+    top: 41%;
+    left: 92.25%;
+  }
+  #star-green {
+    top: 42%;
+    left: 76%;
+  }
+  #star-red {
+    top: 76%;
+    left: 56.5%;
+  }
+  #star-pink {
+    top: 68%;
+    left: 83.25%;
+  }
+  #star-blue {
+    top: 40%;
+    left: 21%;
+  }
+  #star-turquoise {
+    top: 57%;
+    left: 33.5%;
+  }
+  #star-purple {
+    top: 61%;
+    left: 56%;
   }
 }
-@media screen and (min-width: 1320px){
-  #menu-header {
-    margin-top: 0em;
+@media screen and (min-width: 1320px) {
+  .quest-star {
+    width: 0.5vw;
+  }
+  #star-orange {
+    top: 41%;
+    left: 92.25%;
+  }
+  #star-green {
+    top: 42%;
+    left: 76%;
+  }
+  #star-red {
+    top: 76%;
+    left: 56.5%;
+  }
+  #star-pink {
+    top: 68%;
+    left: 83.25%;
+  }
+  #star-blue {
+    top: 40%;
+    left: 21%;
+  }
+  #star-turquoise {
+    top: 57%;
+    left: 33.5%;
+  }
+  #star-purple {
+    top: 61%;
+    left: 56%;
   }
 }

@@ -33,26 +33,7 @@ def before_request():
         if dfl['lang_code'] != request.full_path.split('/')[1]:
             abort(404)
 
-
-@multilingual.route('/')
 @multilingual.route('/index')
+@multilingual.route('/')
 def index():
-    user = {'username': 'Miguel'}
-    posts = [
-        {
-            'author': {'username': 'John'},
-            'body': _('Beautiful day in Portland!')
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': _('The Avengers movie was so cool!')
-        }
-    ]
-    return render_template('multilingual/index.html', title=_('Home'), user=user, posts=posts)
-
-
-@multilingual.route('/cake', defaults={'lang_code': 'en'})
-@multilingual.route('/kuchen', defaults={'lang_code': 'de'})
-@multilingual.route('/gateau', defaults={'lang_code': 'fr'})
-def cake():
-    return render_template('multilingual/cake.html', title=_('The Cake is a Lie'))
+    return render_template('multilingual/index.html', title=_('zeromac | CV'))
