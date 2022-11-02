@@ -21,7 +21,7 @@ msgstr ""
 
 #: app/blueprints/multilingual/routes.py:41
 msgid "zeromac | CV"
-msgstr ""
+msgstr "zeromac | CV"
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:21
 #: app/blueprints/multilingual/templates/multilingual/index.html:23
@@ -454,18 +454,18 @@ msgid ""
 "to use a taxi, interact with another player and move somewhere else. "
 "Easy, but trust me, it sounds more interesting than 'Drive the taxi 3 "
 "times' for the player."
-msgstr ""
+msgstr "Было время и с квестлиниями для разных типов игроков (вы же уже нашли мою статью про фракции?). Небольшой велком квест, который покажет кор фичи. Это как гайд для первого дня в игрушке. Хочешь выполнять квесты дальше - займись какой-то активностью. Только без 'Выполни действие N раз' - это прям последний случай. Не, нет проблемы в том, чтобы подержать игрока на фиче, пока он в ней не разберется, но квесты формата 'собери 150 зерен', где на каждый заход уходит 10-15 секунд, а весь квест состоит из получаса кликов по двум кнопкам - это грустно. Просто грустно. Мой любимый подход к квестам - давать условия. К примеру - 'Захватите замок без лечения юнитов', 'Дайте таксисту на чай'. Да, это штука на один раз, но условный замок заставит некоторых игроков перепроходить эту активность, чтобы выполнить квест. Дать таксисту на чай требует наличие таксиста, с которым придется интерактировать, и в итоге поехать куда-нибудь. Звучит очень просто, но для игрока это выглядит комфортнее, чем 'Прокатитесь на такси 3 раза' (что уж таить, это был один из дейликов моих, я честно стал лучше)"
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:204
 msgid ""
 "I truly enjoy quests of any type, it's an easy way to fill the player in "
 "some basic concepts or give him something to do. Just show that your "
 "project has some soul. And damn, don't make them grind :("
-msgstr ""
+msgstr "Я очень сильно наслаждаюсь квестами любого типа. Это простой способ объяснить игроку базовые концепты или просто занять его чем-нибудь. Просто покажите, что вы проект с душой. Хай бох милуе, не заставляйте их гриндить :("
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:212
 msgid "we all need some time alone..."
-msgstr ""
+msgstr "всем нужно время наедине с собой..."
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:215
 msgid ""
@@ -474,7 +474,7 @@ msgid ""
 "himself lonely. There's always somebody close, there quick small "
 "interactions can make any activity much more interesting! Let me tell "
 "about a couple of my projects here."
-msgstr ""
+msgstr "Соло активности - это классно! В плане в онлайн играх. У меня одно правило при работе с таким - это соло миниигрушка, но игрок не должен чувствовать себя одиноко. Всегда есть кто-то рядом, а вот эти мелкие интеракции могут сделать все куда интереснее! Пожалуй тут время рассказать о паре моих фичей такого формата"
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:216
 msgid ""
@@ -488,7 +488,7 @@ msgid ""
 "ability to choose any bus stop on this route to get off. The driver just "
 "gets a notification, no need for unwanted interactions here. Sometimes "
 "these small moments for unique players fully justify the production cost."
-msgstr ""
+msgstr "Банальная работа водителя автобуса. Я как полноценный ETS enjoyer понимаю удовольствие от такой активности, но казуальные игроки просто устанут от этого, причем достаточно быстро. Дадим немного интерактивности, а то никто так и не посетит одинокого автобусника, который катает круги за софту. Интерактивные остановки, которые игроки могут использовать как Яндекс Карты, точно привлекут внимание людей. Теперь они знают, что существуют эти водители автобусов. Предположим, они захотят прокатиться. А мы возьмем и дадим им возможность оповестить водителя, на какой остановке их остановить. Нет, не текстом, а полноценной менюшкой. Водитель не отвлекается, но знает, что с ним в этой муторной активности есть другие игроки. Честно, такие маленькие моменты удовольствия оправдывают стоимость и время разработки."
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:217
 msgid ""
@@ -499,18 +499,18 @@ msgid ""
 "between players (like a really friendly one) to that - everyone loves a "
 "competition! A bit of a skill system and that's all players need for such"
 " a simple activity."
-msgstr ""
+msgstr "Чуть полегче. Все же знают о существовании очень-очень скучных на первый взгляд активностей, типа рыбалки. Лично я знаю, и единственная рыбалка в моей жизни была максимально скучным опытом. А давайте перенесем этот прекрасный опыт в свой проект! Не аналог симулятора рыбалки, куда казуальнее, чтобы просто завалиться после тяжелого дня позалипать. Сверху накинем магазин рыболовных айтемов для вывода капельки софты. Накидываем какое-нибудь микро-соревнование (прям совсем дружелюбное) - все любят такие соревнования! Система скиллов, чтобы можно было ожидать чего-то еще от системы. Да и собственно все, даже такую скучную идею как рыбалку можно принести в виде расслабляющей активности тайм-киллера!"
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:225
 msgid "... and some time together"
-msgstr ""
+msgstr "... и время в компании"
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:228
 msgid ""
 "Let's have a little monologue of mine about getting players together. "
 "Factions, of course, the oldest trick in the book! It happens that I have"
 " something to say about these mechanics too."
-msgstr ""
+msgstr "Это мой маленький монолог о том, как можно сгруппировать игроков. Конечно же в формате фракций, старейший трюк в книге! Удивительно, но и про это я могу что-то сказать."
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:229
 msgid ""
@@ -519,7 +519,7 @@ msgid ""
 " random people, you know. The only way for project staff to keep it cool "
 "is to eliminate these players or give them something to do. Interesting "
 "features attract anyone."
-msgstr ""
+msgstr "В проекте, чей кор это взаимодействие игроков путем говорения (ну я и сказал конечно, я бы это исправил, но это слишком платина), для фракций нужен сильный лидер. Иногда это проблемно. Сложно контролировать абсолютно случайных людей. Как это может починить команда? Убрать неприятных игроков, к примеру. Или завлечь их интересными фичами. Второй вариант звучит интереснее."
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:230
 msgid ""
@@ -534,7 +534,7 @@ msgid ""
 "feature to allow people enjoy this. Bored again? Add one more faction "
 "from each side - army and mafia. Even the simplest concept can be evolved"
 " into something really complex."
-msgstr ""
+msgstr "Базовый концепт - законники против преступников. Звучит прикольно на первые моменты, но со временем это надоест, игроки начнут творить херню и будут руинить геймплей остальным в поисках чего-то веселого (ну или просто уйдут). Дадим законникам функционал отслеживать преступников, накинем на это контрмеру в виде глушилок. Криминалу же дадим возможность рейдить базы законников для получения оружия. Контрмера тут не нужна, это и так рискованно приходить на респаун противника, но процесс оправдывает себя наградой. Вот и простой концепт, который позволит людям дальше получать удовольствие. Снова надоело? Добавим еще по фракции с каждой стороны - условные армии и мафии. Самый простой концепт может оказаться в будущем чем-то искренне большим и сложным."
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:231
 msgid ""
@@ -542,7 +542,7 @@ msgid ""
 "players ability to create their own factions. People are pretty "
 "interesting, they'll form up a conflict by themselves. Give them a base, "
 "something to do, they'll be happy to have some fun!"
-msgstr ""
+msgstr "Окей, предположим сложно поддерживать это все. Дадим просто игрокам возможность создавать свои собственные фракции. Люди сами по себе интересные, они самостоятельно сформируют конфликт и разойдутся минимум по две стороны. Дать им базу, какие-нибудь активности между собой и между этими кланами, да и пусть веселятся. А они будут!"
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:232
 msgid ""
@@ -551,5 +551,4 @@ msgid ""
 "idea was taken to more than ten different factions. On the other hand, "
 "unofficial factions were forming with our attempts to support this "
 "feature. Trust me, these concepts work great together!"
-msgstr ""
-
+msgstr "На самом деле, говоря про оба этих концепта, мне посчастливилось побывать в проекте, где обе идеи вышли в прод (правда в каплю другой реализации). Простая стрелялка между полицией и криминалом перешла более чем в десяток разных фракций. С другой стороны куча мелких неофициальных фракций, которые стали популярнее с релизом обновлений для их механик. Поверьте мне, эти концепты замечательно работают в паре!"

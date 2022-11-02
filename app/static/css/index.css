@@ -84,7 +84,7 @@
     opacity: 0;
     font-family: CyberFont;
     font-size: 2vw;
-    bottom: 10%;
+    bottom: 18%;
     left: 40%;
     color: green;
   }
@@ -164,7 +164,7 @@
     opacity: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10vh;
+    bottom: 3.5em;
     width: 100vw;
   }
 
@@ -222,6 +222,9 @@
 
   .desc-image {
     float:right;
+  }
+  .desc-image > figcaption {
+    text-align: center;
   }
 
   footer {
@@ -386,20 +389,14 @@
 @media screen and (min-width: 992px) {
   #menu-header {
     font-size: 3.5vw;
-    margin-top: 30%;
+    margin-top: 20%;
   }
   #menu-header-sub {
     font-size: 1vw;
-    margin-bottom: 5%;
+    margin-bottom: 20%;
   }
   .menu-item {
     font-size: 1.7vw;
-  }
-  #game-warning {
-    font-size: 2vw;
-    position: absolute;
-    margin-top: 50%;
-    margin-left: 15%;
   }
 }
 @media screen and (min-width: 1140px) and (max-width: 1320px) {
@@ -436,6 +433,16 @@
   }
 }
 @media screen and (min-width: 1320px) {
+  .desc-overlay {
+    -webkit-overflow-scrolling: auto;
+    width: 60vw;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
   .quest-star {
     width: 0.5vw;
   }
