@@ -59,7 +59,9 @@ def index():
 @multilingual.route('/guest')
 def guest():	
     result = Comments.query.all()
-    keyerror = session['keyerror']
+    keyerror = False
+    if (session.get('keyerror')):
+        keyerror = session['keyerror']
     session['keyerror'] = False
     return render_template('multilingual/guest.html', result=result, keyerror=keyerror)
 
@@ -74,6 +76,7 @@ def process():
     for i in result:
         if key == i.stringkey:
             if not i.used or i.admin:
+                keyerror = False
                 if not i.admin:
                     i.used = True
                     db.session.commit()
