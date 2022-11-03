@@ -105,6 +105,7 @@ def process():
                 signature = Comments(name=name, date=strftime("%Y-%m-%d %H:%M:%S", gmtime()),comment=comment, pinned=i.admin)
                 db.session.add(signature)
                 db.session.commit()
+                break
             else:
                 keyerror = True
         else:
