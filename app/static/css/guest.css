@@ -43,12 +43,9 @@ body {
 .post-header .post-date {
     display: inline;
 }
-.form-control {
-    color: white;
-}
 .post-text {
     font-family: Queulat;
-    color: white;
+    color: #fff !important;
     word-break: break-all;
 }
 #post-error {
