@@ -48,6 +48,9 @@ body {
     color: #fff !important;
     word-break: break-all;
 }
+.post-text:focus {
+    color: #fff !important;
+}
 #post-error {
     font-family: Queulat;
     color: green;
