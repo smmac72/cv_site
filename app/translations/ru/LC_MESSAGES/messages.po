@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: @smmac72\n"
-"POT-Creation-Date: 2022-11-03 22:48+0300\n"
+"POT-Creation-Date: 2022-11-03 23:53+0300\n"
 "PO-Revision-Date: 2022-11-02 14:07+0300\n"
 "Last-Translator: zeromac\n"
 "Language: ru\n"
@@ -18,6 +18,14 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
+
+#: app/blueprints/multilingual/templates/multilingual/404.html:29
+msgid "That's a 404, dudes!"
+msgstr "А это 404, ребят :("
+
+#: app/blueprints/multilingual/templates/multilingual/404.html:32
+msgid "There's nothing here. Nothing at all. Just come back"
+msgstr "Тут ничего нет. Правда. Просто возвращайтесь"
 
 #: app/blueprints/multilingual/templates/multilingual/guest.html:28
 msgid "zeromac | smoking room"
@@ -812,3 +820,4 @@ msgstr ""
 
 #~ msgid "zeromac"
 #~ msgstr "zeromac"
+

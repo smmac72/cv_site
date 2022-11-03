@@ -155,7 +155,7 @@
   #star-purple {
     filter: invert(36%) sepia(98%) saturate(7380%) hue-rotate(279deg) brightness(80%) contrast(126%);
   }
-
+  
   .modal-body
   {
     background: rgba(0, 128, 0, 0.5);
@@ -191,6 +191,7 @@
     float:right;
     text-align: center;
   }
+
   .desc-image > figcaption {
     text-align: center;
   }
