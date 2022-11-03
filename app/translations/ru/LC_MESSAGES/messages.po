@@ -253,7 +253,7 @@ msgstr ""
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:151
 msgid "if you have something to tell about me, you're welcome in our "
-msgstr ""
+msgstr "если хочется что-нибудь тут написать, добро пожаловать в раздел "
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:160
 msgid "this feature will work. probably."
