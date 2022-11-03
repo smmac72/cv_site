@@ -358,6 +358,8 @@
 @media screen and (min-width: 992px) {
   .modal-dialog{
     max-width: 50% !important;
+    margin-left: auto;
+    margin-right: auto;
   }
   #menu-header {
     font-size: 3.5vw;
