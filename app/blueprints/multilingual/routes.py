@@ -51,6 +51,10 @@ def before_request():
         if dfl['lang_code'] != request.full_path.split('/')[1]:
             abort(404)
 
+@application.errorhandler(404)
+def notfound(e):
+    return render_template('multilingual/404.html')
+
 @multilingual.route('/index')
 @multilingual.route('/')
 def index():
