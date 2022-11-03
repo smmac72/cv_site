@@ -37,3 +37,7 @@ def before_request():
 @multilingual.route('/')
 def index():
     return render_template('multilingual/index.html', title=_('zeromac | CV'))
+
+@multilingual.route('/guest')
+def guest():
+    return render_template('multilingual/index.html', title=_('zeromac | reviews'))

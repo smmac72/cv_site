@@ -4,7 +4,6 @@ var SoundIcon = SoundButton.getElementsByClassName("bi")[0];
 var audio = new Audio('/static/audio/audio_file.mp3');
 
 var enableMusic = function() {
-    console.log("enabled");
     SoundIcon.classList.remove('bi-volume-mute');
     SoundIcon.classList.add('bi-volume-up');
     SoundButton.removeEventListener('click', enableMusic, false);
@@ -20,7 +19,6 @@ var enableMusic = function() {
     SoundDescription.innerHTML = "retroTV | Amusement Park (Chiptune cover)"
 }
 var disableMusic = function() {
-    console.log("disabled");
     SoundIcon.classList.remove('bi-volume-up');
     SoundIcon.classList.add('bi-volume-mute');
     SoundButton.removeEventListener('click', disableMusic, false);
