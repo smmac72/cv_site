@@ -1,0 +1,443 @@
+
+  
+  body {
+    min-height: calc(100vh - 40px);
+    background-color: rgba(1,0,1,1);
+    margin: 0px;
+  }
+
+  #menu { 
+    font-family: CyberFont;
+    z-index: 1;
+  }
+  
+  #menu-items {
+    margin-top: 3vh;
+    padding-bottom: 8vh;
+    font-family: CyberFont;
+    font-size: 1vw;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #menu-items:hover > .menu-item {
+    opacity: 0.3;
+  }
+  
+  #menu-items:hover > .menu-item:hover {
+    opacity: 0.8; 
+  }
+
+  #menu-header {
+    font-size: 4.7vw;
+    margin-top: 5vh;
+    color: green;
+    font-family: CyberFont;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  #menu-header-sub {
+    position: relative;
+    font-size: 2.5vw;
+    color: green;
+    opacity: 0.5;
+    font-family: CyberFont;
+    z-index: 1;
+  }
+  
+  .menu-item {
+    font-family: CyberFont;
+    padding-top: 1vh;
+    font-size: 2.6vw;
+    color: green;
+    opacity: 0.6;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 400ms ease;
+  }
+  
+  body.menu-toggled > .meta-link > span {
+    color: rgb(30, 30, 30);
+  }
+  
+  .language-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    scale: initial;
+  }
+
+  #game {
+    position: relative;
+  }
+
+  #game-warning-mobile {
+    opacity: 0;
+    position: relative;
+    font-family: CyberFont;
+    font-size: 3.5vw;
+    color: green;
+  }
+
+  #game-warning-pc {
+    position: absolute;
+    opacity: 0;
+    font-family: CyberFont;
+    font-size: 2vw;
+    bottom: 18%;
+    left: 40%;
+    color: green;
+  }
+
+  #game-background {
+    width: 100vw;
+    max-width: 100vw;
+    content: url('img/background.gif');
+      opacity: 0.6;
+      transition: opacity 800ms ease,
+        background-size 800ms ease,
+        background-position 800ms ease;
+    z-index: 0;
+  }
+
+  .quest-star {
+    width: 0.4vw;  
+    position: absolute;
+    content: url('img/star0.png');
+    cursor:pointer;
+    opacity: 1;
+
+    -webkit-animation:star-anim 1s infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation:star-anim 1s infinite;
+    animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes star-anim { 
+    100% { content: url('img/star1.png'); }
+  }
+  @keyframes star-anim {
+    100% { content: url('img/star1.png'); }
+  }
+
+  .quest-star.off {
+    opacity: 0;
+  }
+
+  .button-star {
+    cursor: pointer;
+  }
+  #star-orange {
+    filter: invert(11%) sepia(80%) saturate(6576%) hue-rotate(2deg) brightness(103%) contrast(119%);
+  }
+
+  #star-green {
+    filter: invert(55%) sepia(85%) saturate(3464%) hue-rotate(86deg) brightness(125%) contrast(121%);
+  }
+
+  #star-red {
+    filter: invert(98%) sepia(36%) saturate(7268%) hue-rotate(356deg) brightness(109%) contrast(102%);
+  }
+
+  #star-pink {
+    filter: invert(30%) sepia(95%) saturate(5831%) hue-rotate(294deg) brightness(112%) contrast(131%);
+  }
+
+  #star-blue {
+    filter: invert(47%) sepia(78%) saturate(3051%) hue-rotate(191deg) brightness(101%) contrast(101%);
+  }
+
+  #star-turquoise {
+    filter: invert(61%) sepia(94%) saturate(289%) hue-rotate(125deg) brightness(103%) contrast(93%);
+  }
+
+  #star-purple {
+    filter: invert(36%) sepia(98%) saturate(7380%) hue-rotate(279deg) brightness(80%) contrast(126%);
+  }
+
+  .modal-body
+  {
+    background: rgba(0, 128, 0, 0.5);
+  }
+
+  .modal-dialog {
+    max-width: 90% !important;
+  }
+
+  .modal-content
+  {
+    font-family: 'Queulat';
+    color: white;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    background-color: transparent;
+  }
+  
+  .modal-header
+  {
+    font-family: 'CyberFont';
+    background: rgba(0, 128, 0, 0.228);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+  }
+
+  .desc-image {
+    float:right;
+    text-align: center;
+  }
+  .desc-image > figcaption {
+    text-align: center;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+  }
+
+/* 
+  adaptive stuff for star buttons bruh
+  le kostyl below
+*/
+@media screen and (max-width: 992px) {
+  #game-warning-mobile {
+    opacity: 1;
+  }
+  #game-warning-pc {
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  #game-warning-mobile {
+    opacity: 0;
+  }
+  #game-warning-pc {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 540px) {
+  .quest-star {
+    width: 1vw;
+  }
+  #star-orange {
+    top: 41%;
+    left: 95.5%;
+  }
+  #star-green {
+    top: 42%;
+    left: 79%;
+  }
+  #star-red {
+    top: 75%;
+    left: 60%;
+  }
+  #star-pink {
+    top: 65%;
+    left: 116%;
+  }
+  #star-blue {
+    top: 40%;
+    left: 24%;
+  }
+  #star-turquoise {
+    top: 57%;
+    left: 36.5%;
+  }
+  #star-purple {
+    top: 43%;
+    left: 132%;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 720px) {
+  .quest-star {
+    width: 0.8vw;
+  }
+  #star-orange {
+    top: 41%;
+    left: 94.5%;
+  }
+  #star-green {
+    top: 42%;
+    left: 78%;
+  }
+  #star-red {
+    top: 75%;
+    left: 59%;
+  }
+  #star-pink {
+    top: 65%;
+    left: 115%;
+  }
+  #star-blue {
+    top: 40%;
+    left: 23%;
+  }
+  #star-turquoise {
+    top: 57%;
+    left: 35.5%;
+  }
+  #star-purple {
+    top: 43%;
+    left: 131%;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 992px) {
+  .quest-star {
+    width: 0.7vw;
+  }
+  #star-orange {
+    top: 41%;
+    left: 93.5%;
+  }
+  #star-green {
+    top: 42%;
+    left: 77%;
+  }
+  #star-red {
+    top: 75%;
+    left: 58%;
+  }
+  #star-pink {
+    top: 65%;
+    left: 114%;
+  }
+  #star-blue {
+    top: 40%;
+    left: 22%;
+  }
+  #star-turquoise {
+    top: 57%;
+    left: 34.5%;
+  }
+  #star-purple {
+    top: 43%;
+    left: 130%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1140px) {
+  .quest-star {
+    width: 0.65vw;
+  }
+  #star-orange {
+    top: 41%;
+    left: 92.25%;
+  }
+  #star-green {
+    top: 42%;
+    left: 76%;
+  }
+  #star-red {
+    top: 76%;
+    left: 56.5%;
+  }
+  #star-pink {
+    top: 68%;
+    left: 83.25%;
+  }
+  #star-blue {
+    top: 40%;
+    left: 21%;
+  }
+  #star-turquoise {
+    top: 57%;
+    left: 33.5%;
+  }
+  #star-purple {
+    top: 61%;
+    left: 56%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .modal-dialog{
+    max-width: 50% !important;
+  }
+  #menu-header {
+    font-size: 3.5vw;
+    margin-top: 20%;
+  }
+  #menu-header-sub {
+    font-size: 1vw;
+    margin-bottom: 20%;
+  }
+  .menu-item {
+    font-size: 1.7vw;
+  }
+}
+@media screen and (min-width: 1140px) and (max-width: 1320px) {
+  .quest-star {
+    width: 0.6vw;
+  }
+  #star-orange {
+    top: 41%;
+    left: 92.25%;
+  }
+  #star-green {
+    top: 42%;
+    left: 76%;
+  }
+  #star-red {
+    top: 76%;
+    left: 56.5%;
+  }
+  #star-pink {
+    top: 68%;
+    left: 83.25%;
+  }
+  #star-blue {
+    top: 40%;
+    left: 21%;
+  }
+  #star-turquoise {
+    top: 57%;
+    left: 33.5%;
+  }
+  #star-purple {
+    top: 61%;
+    left: 56%;
+  }
+}
+@media screen and (min-width: 1320px) {
+  .desc-overlay {
+    width: 90%;
+    top: 75em;
+  }
+  .quest-star {
+    width: 0.5vw;
+  }
+  #star-orange {
+    top: 41%;
+    left: 92.25%;
+  }
+  #star-green {
+    top: 42%;
+    left: 76%;
+  }
+  #star-red {
+    top: 76%;
+    left: 56.5%;
+  }
+  #star-pink {
+    top: 68%;
+    left: 83.25%;
+  }
+  #star-blue {
+    top: 40%;
+    left: 21%;
+  }
+  #star-turquoise {
+    top: 57%;
+    left: 33.5%;
+  }
+  #star-purple {
+    top: 61%;
+    left: 56%;
+  }
+}
