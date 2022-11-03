@@ -71,7 +71,7 @@
                       </div>
                       <button class="btn btn-dark" type="submit">Send</button>
                       {% if keyerror %}
-                        <div id="post-error">{{_("That's not a valid secret key!")}}</div>
+                        <div id="post-error" onshow="ym(91027202,'reachGoal','TARGET_GUEST_FAILKEY')">{{_("That's not a valid secret key!")}}</div>
                       {% endif %}
                     </form>
                     <div id="comment-section">
@@ -106,7 +106,7 @@
         </div>
         <div class="col-3 d-flex justify-content-end" id="audio-description"></div>
         <div class="col d-flex justify-content-end">
-            <a class="btn btn-dark" href="/" role="button">go back</a>
+            <a class="btn btn-dark" href="/" role="button" onclick="ym(91027202,'reachGoal','TARGET_HOME')">go back</a>
           </a>
         </div>
      </div>
