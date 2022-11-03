@@ -113,7 +113,7 @@ msgid ""
 " Russia for the most part of my 20-year life. Majoring in Computer "
 "Science at Saint-Petersburg State University, left Moscow for this "
 "beautiful city."
-msgstr "России большую часть своих 20 лет жизни. Обучаюсь в СПбГУ на направлении Программная Инженерия, приехал сюда из Москвы ради этого прекрасного города!"
+msgstr " России большую часть своих 20 лет жизни. Обучаюсь в СПбГУ на направлении Программная Инженерия, приехал сюда из Москвы ради этого прекрасного города!"
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:83
 msgid ""
