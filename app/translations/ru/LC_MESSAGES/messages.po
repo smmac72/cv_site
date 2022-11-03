@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: @smmac72\n"
-"POT-Creation-Date: 2022-11-03 23:53+0300\n"
+"POT-Creation-Date: 2022-11-04 00:37+0300\n"
 "PO-Revision-Date: 2022-11-02 14:07+0300\n"
 "Last-Translator: zeromac\n"
 "Language: ru\n"
@@ -814,6 +814,23 @@ msgstr ""
 "десяток разных фракций. С другой стороны куча мелких неофициальных "
 "фракций, которые стали популярнее с релизом обновлений для их механик. "
 "Поверьте мне, эти концепты замечательно работают в паре!"
+
+#: app/blueprints/multilingual/templates/multilingual/technical.html:7
+#: app/blueprints/multilingual/templates/multilingual/technical.html:28
+msgid "Technical standby"
+msgstr "Технические шоколадки"
+
+#: app/blueprints/multilingual/templates/multilingual/technical.html:29
+msgid "supported by "
+msgstr "при поддержке "
+
+#: app/blueprints/multilingual/templates/multilingual/technical.html:30
+msgid "zeromac"
+msgstr "zeromac"
+
+#: app/blueprints/multilingual/templates/multilingual/technical.html:31
+msgid "Everything will return to normal soon! Hope so"
+msgstr "Скоро все будет как обычно! Надеюсь :("
 
 #~ msgid "zeromac | CV"
 #~ msgstr "zeromac | CV"

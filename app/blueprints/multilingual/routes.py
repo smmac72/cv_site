@@ -22,6 +22,9 @@ class CommentKeys(db.Model):
 	admin = db.Column(db.Boolean)
 	used = db.Column(db.Boolean)
 
+class Server(db.Model):
+	active = db.Column(db.Boolean, primary_key=True)
+
 application.secret_key = b'i am buying slaves my dudes'
 
 multilingual = Blueprint('multilingual', __name__,
@@ -53,15 +56,27 @@ def before_request():
 
 @application.errorhandler(404)
 def notfound(e):
+    TechCheck = Server.query.all()[0]
+    if (not TechCheck.active):
+        return render_template('multilingual/technical.html')
+
     return render_template('multilingual/404.html')
 
 @multilingual.route('/index')
 @multilingual.route('/')
 def index():
+    TechCheck = Server.query.all()[0]
+    if (not TechCheck.active):
+        return render_template('multilingual/technical.html')
+
     return render_template('multilingual/index.html')
 
 @multilingual.route('/guest')
-def guest():	
+def guest():
+    TechCheck = Server.query.all()[0]
+    if (not TechCheck.active):
+        return render_template('multilingual/technical.html')
+
     result = Comments.query.all()
     keyerror = False
     if (session.get('keyerror')):
@@ -71,6 +86,9 @@ def guest():
 
 @multilingual.route('/process', methods=['POST'])
 def process():
+    TechCheck = Server.query.all()[0]
+    if (not TechCheck.active):
+        return render_template('multilingual/technical.html')
     name = request.form['name']
     key = request.form['key']
     comment = request.form['comment']

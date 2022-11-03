@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{_("Technical standby")}}</title>
+
+    <meta name="description" content="that's a 404 my dudes"/>
+
+    <link rel="icon" href="/static/img/technical_icon.svg">
+
+    <style>
+        @font-face {
+            font-family: CyberFont;
+            src: url("{{ url_for('static', filename='fonts/ferocity.otf') }}");
+            font-weight: bold;
+        }
+        @font-face {
+            font-family: Queulat;
+            src: url("{{ url_for('static', filename='fonts/Queulat-Regular.otf') }}");
+        }
+    </style>
+</head>
+<body style="background-color:rgba(96,104,213,255)">
+    <div style="text-align:center;font-family:Queulat;color:white">
+        <img src="/static/css/img/technical.gif" style="max-width:100%;height:auto"></img>
+        <div style="font-size:7vw">{{_("Technical standby")}}</div>
+        <div style="display:inline; font-size:2vw">{{_("supported by ")}}</div>
+        <div style="display:inline; font-size:3vw; font-family: CyberFont;">{{_("zeromac")}}</div>
+        <div style="font-size: 2vw; margin-top:3vh">{{_("Everything will return to normal soon! Hope so")}}</div>
+    </div>
+</body>
+</html>
