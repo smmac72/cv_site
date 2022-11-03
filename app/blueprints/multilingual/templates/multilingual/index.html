@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
 		<style>
@@ -17,13 +18,33 @@
 			src: url("{{ url_for('static', filename='fonts/Queulat-Regular.otf') }}");
 			}
 		</style>
+
 		{% if title %}
 		<title>{{_('zeromac')}} | {{ title }}</title>
 		{% else %}
 		<title>{{_('zeromac')}}</title>
 		{% endif %}
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+      ym(91027202, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+      });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/91027202" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 	</head>
-	<body scroll="no" style="overflow: hidden">
+
+	<body style="overflow: hidden">
 		<div class="container-fluid w-100">
 			<div class="row">
 				<div class="col-12 col-lg-4 d-flex">
@@ -37,209 +58,232 @@
 							</div>
 						</div>
 						<div class="row d-flex text-nowrap justify-content-center offset-lg-2" id="menu-items">
-							<a class="col-6 col-lg-12 text-center text-lg-start menu-item" href="#Professional" id="prof-link">{{_("professional info")}}</a>
-							<a class="col-6 col-lg-12 text-center text-lg-start menu-item" href="#Personal" id="personal-link">{{_("personal info")}}</a>
-							<a class="col-5 col-lg-12 text-center text-lg-start menu-item" href="#Contacts" id="socials-link">{{_("contact me")}}</a>
+							<div class="col-6 col-lg-12 text-center text-lg-start menu-item" onclick="ym(91027202,'reachGoal','TARGET_PROFESSIONAL')" id="prof-link">{{_("professional info")}}</div>
+							<div class="col-6 col-lg-12 text-center text-lg-start menu-item" onclick="ym(91027202,'reachGoal','TARGET_PERSONAL')" id="personal-link">{{_("personal info")}}</div>
+							<div class="col-5 col-lg-12 text-center text-lg-start menu-item" onclick="ym(91027202,'reachGoal','TARGET_CONTACTS')" id="socials-link">{{_("contact me")}}</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-12 w-100 text-center order-0 order-lg-1" id="game-warning-mobile">{{_("catch all the stars!")}}</div>
 				<div class="col-8 order-1 order-lg-0" id="game">
 					<img id="game-background"></img>
-					<input type="image" class="quest-star" id="star-orange" onclick="location.href='#Documentation'"></input>
-					<input type="image" class="quest-star" id="star-red" onclick="location.href='#Weapons'"></input>
-					<input type="image" class="quest-star" id="star-pink" onclick="location.href='#Economy'"></input>
-					<input type="image" class="quest-star" id="star-blue" onclick="location.href='#Donate'"></input>
-					<input type="image" class="quest-star" id="star-green" onclick="location.href='#Quests'"></input>
-					<input type="image" class="quest-star" id="star-turquoise" onclick="location.href='#SoloActivities'"></input>
-					<input type="image" class="quest-star" id="star-purple" onclick="location.href='#Factions'"></input>
+					<img class="quest-star" id="star-orange" onclick="ym(91027202,'reachGoal','TARGET_DOCUMENTATION');"></img>
+					<input type="image" class="quest-star" id="star-red" onclick="ym(91027202,'reachGoal','TARGET_WEAPONS')"></input>
+					<input type="image" class="quest-star" id="star-pink" onclick="ym(91027202,'reachGoal','TARGET_ECONOMY')"></input>
+					<input type="image" class="quest-star" id="star-blue" onclick="ym(91027202,'reachGoal','TARGET_DONATE')"></input>
+					<input type="image" class="quest-star" id="star-green" onclick="ym(91027202,'reachGoal','TARGET_QUESTS')"></input>
+					<input type="image" class="quest-star" id="star-turquoise" onclick="ym(91027202,'reachGoal','TARGET_SOLO')"></input>
+					<input type="image" class="quest-star" id="star-purple" onclick="ym(91027202,'reachGoal','TARGET_FACTIONS')"></input>
           <div id="game-warning-pc">{{_("catch all the stars!")}}</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="professinalModal" tabindex="-1" aria-labelledby="professinalModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="professinalModalLabel">{{_("why you should hire me")}}</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>{{_("So, I've been working as a game-designer in balance and features for the last three years. My main sphere is MMORPG games with an emphasis on simulating some real-life activities. Mostly aiming to continue working with projects aimed to let people interact in virtual spaces.")}}</p>
+            <p>{{_("Spent some time in indie studios, had a bit of experience in casual mobile games. Sometimes I take part in consulting indie developers and small studios, mostly from my area of interest.")}}</p>
+            <p>{{_("Was working on features from idea to product release with product managers, developers and designers. Have basic knowledge of the idea of analytics. Had been working with a couple game-dev analytics. Gotta say honestly, a bit rusty, but nothing that ten minutes in google can't fix")}}</p>
+            <p>{{_("Currently working on a pet-project in Unreal Engine 4. Playing with some third-person shooter concepts.")}}</p>
+            <p>{{_("If you want to know more, there's a small clicker game somewhere in this CV. It's more of my personal experience with some feautures. Have fun!")}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="personalModal" tabindex="-1" aria-labelledby="personalModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="personalModalLabel">{{_("i am interesting")}}</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <figure class="desc-image">
+              <img src="{{ url_for('static', filename='img/me.jpeg') }}" style="width:50%;height:auto;">
+             <figcaption class="desc-caption">"{{_("that's literally me")}}"</figcaption>
+            </figure>
+            <p>{{_("Name's Oleg, living in ")}} <s>{{_("constant pain")}}</s>{{_(" Russia for the most part of my 20-year life. Majoring in Computer Science at Saint-Petersburg State University, left Moscow for this beautiful city.")}}</p>
+            <p>{{_("I was playing computer games since childhood, but found myself in lots of different places. Favorite hobby's cooking, I've been learning to cook since the age of 14. Also I've been studying massage practices from all over the world (mostly Thailand and Caribbean). Two years of mixing drinks, two of my absolute favorites are white russian and cuba libre. If you're not an HR or at least a friendly one, my doors are always open. Always can let you cry on my shoulder, my bros.")}}</p>
+            <p>{{_("Sounds stereotypical, but I enjoy travelling with 20+ countries on my list. Gotta hit it up to 193 if our borders open sometimes..")}}</p>
+            <p>{{_("Wow, an interesting fact! I'm fluent in Russian. Who could've guessed... I guess I can also make up a few sentences in English. Was trying to learn French, but my max is bumming a cigarette :(")}}</p>
+            <p>{{_("If you're an HR looking at another CV, gotta give you something, right? Everyone is writing about their personal qualities, so here we go")}}</p>
+            <ul>
+              <li>{{_("Friendly and easy to get on with, I guess. Have lots of experience talking to people, I kinda like it... ")}}</li>
+              <li>{{_("Fast learner. Just take a look at this CV, I have one night of experience in web development. At least it hasn't broken yet")}}</li>
+              <li>{{_("Stress tolerance. Perhaps. We all experience stress in our own ways. Can't deny I have lots of stressful things around me, but I can live with that")}}</li>
+              <li>{{_("Initiative, but that's certainly a bad trait sometimes. Don't do extra work if nobody gives a shit, that's bad for your mental health, fellas!")}}</li>
+              <li>{{_("I am certainly a team person. As a member, as a leader, you name it. People with the same goal always give you extra determination")}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="contactsModal" tabindex="-1" aria-labelledby="contactsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="contactsModalLabel">{{_("i'll answer you immediately")}}</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <img src="{{ url_for('static', filename='img/telegram.png') }}" style="width:20px;height:20px;">
+               telegram - <a href="tg://resolve?domain=smmac72">@smmac72</a>
+            </p>
+            <p>
+              <img src="{{ url_for('static', filename='img/mail.png') }}" style="width:20px;height:20px;">
+               {{_("email")}} - <a href="mailto:smmac072@gmail.com">smmac072@gmail.com</a>
+            </p>
+            <p>
+              <img src="{{ url_for('static', filename='img/vk.png') }}" style="width:20px;height:20px;">
+               VK - <a href="https://vk.com/smmac72">@smmac72</a>
+            </p>
+            <p>{{_("please don't call me in telegram in 3am, i'm tilting. cheers!")}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="documentationModal" tabindex="-1" aria-labelledby="documentationModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="documentationModalLabel">{{_("this feature will work. probably.")}}</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>{{_("That's my base and ABSOLUTELY favorite thing to do. There's actually not much to say, you get your assignment from the product manager or your lead, look at your project in search of some point you can start from, then you create your masterpiece! I have experience in working on completely new features, updating old ones and covering both of these types with documentation. The only thing I'm gonna show is my own documentation structure. Everyone has one, sometimes it's something given by the your team, in other cases you form the rules all by yourself. So here's mine!")}}</p>
+            <ul>
+              <li>{{_("<b>Feature name</b> || Cool name is half of your job done")}}</li>
+              <li>{{_("<b>Short description</b> || Just a few sentences about functionality")}}</li>
+              <li>{{_("<b>Target audience</b> || Think about caterogies of players who need this mechanic")}}</li>
+              <li>{{_("<b>Feature target</b> || Now understand what this feature can do for these players")}}</li>
+              <li>{{_("<b>Targeted metrics</b> || I usually have three types of features - making gameplay richer, monetization stuff and keeping the engagement of your project high")}}</li>
+              <li>{{_("<b>Long description</b> || That's like a short description, but a long one! Get every element of your feature, try to understand every condition, work with every case. Rich feature coverage in your documentation is the main part of your success!")}}</li>
+              <li>{{_("<b>Balance</b> || Don't keep your numbers in the description. Just refer to this paragraph, so it's easier to keep and edit everything number-related")}}</li>
+              <li>{{_("<b>Design stuff</b> || Mostly mockups of UI and 3D (or 2D, but I've never worked with two-dimensional worlds in games). Explain what you need from visuals.")}}</li>
+            </ul>
+            <p>{{_("I've developed this easy structure, but I'm willing to move over to other documentation formats if needed. Don't forget, documentation is half of the feature, make it a great half!")}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="weaponsModal" tabindex="-1" aria-labelledby="weaponsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="weaponsModalLabel">{{_("war crimes are better with some friends!")}}</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>{{_("Ok, that's a page of mostly me trying to understand shooters. Guns are cool because of the movie culture, so people love them. I've taken part in two weapon-based features.")}}</p>
+            <p>{{_("First one way quite easy, that's a faction stuff (link somewhere in my CV). Balance a few weapons, give them a reasonable cost and ways of getting your hands on them. A bit of a number tinkering. What can be better? I absolutely love it!")}}</p>
+            <p>{{_("Now onto some complex stuff. A well crafted system with lots of behaviorally different weapons. Attachments, upgrade, gameplay features based on interaction between players via weapons. Awesome soft currency sink. Was one of my favorite features until most of it became based on the hard currency. Felt bad. So much revenue in day1, I even couldn't upgrade one weapon to its max level, there was less hard currency on my test accounts.")}}</p>
+            <p>{{_("That's just one way to let people interact with each other. And surely, it's a fun way! Current generation grew up on shooters, we're kinda used to instinctively pressing LMB to shoot and raging on skilled opponents.")}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="economyModal" tabindex="-1" aria-labelledby="economyModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="economyModalLabel">{{_("balancing the most broken")}}</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>{{_("I love money! I mean soft currency, which is always losing its cost. I'm no economist, but this process can be slowed down a little. Perhaps.")}}</p>
+            <p>{{_("Actually, that was my last job and.. damn, that was a really long journey for me. I've been fiddling with almost every in-game system, the economy there went down really bad.")}}</p>
+            <p>{{_("First of all, you gotta isolate the whole economical system. There's already lots of sort currency there, won't be a problem. Just stop introducing more money to this poor economy :(. Some players were getting money from the system? Create an in-game fund, like a government treasury, let people pay taxes. The only way to introduce more money is your donate system. And trust me, after a while it'll be a blessing for your paying playerbase.")}}</p>
+            <p>{{_("Alright, now onto player earnings. Dive in your legacy mechanics, fiddle with them for some time. Perhaps you have a poorly balanced activity from the past. Don't lower the payouts massively, nobody likes that. Just bring everything to 'I guess that's ok' level.")}}</p>
+            <p>{{_("Now some gold sinks, of course. Let people buy a few unique items for sort currency. Give 'em lots of small money sinks. That's a long process, but your economy should stabilize at least a little. No more new soft currency, everything's exchanged between players. God bless American Euro!")}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="donateModalLabel">{{_("mom can I get 20 bucks")}}</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <figure class="desc-image">
+              <img src = "{{ url_for('static', filename='img/pic-donate.webp') }}" style="width:450px;height:300px;"/>
+            <figcaption class="desc-caption">"and you bring me more meth?"</figcaption>
+            </figure>
+            <p>{{_("Wanna lead a prosperous project? Make your playerbase pay you for virtual images! The more they pay, the more ")}}<s>{{_("bottles of 21 year old Glenfiddich you can bring to your office!")}}</s>{{_(" you can invest back!")}}</p>
+            <p>{{_("I've been working on a few features aimed at increasing ARPPU. Let me give you a quick tour on this")}}</p>
+            <ul>
+              <li>{{_("Exchanging money for in-game abilities, unique features (my absolutely favorite - ability to turn off your in-game phone in one project), skins - that's the basic stuff. One of the main problems for me was trying to find something valuable for players to be willing to donate. Exchanging real money for soft currency is easier. The only question - will your economical system hold?")}}</li>
+              <li>{{_("Constant monetization on sticky players. The concept of a battlepass is one of the best inventions in game-dev history. Player gives you money to play even more?. Damn, that's hot! Give them some tasks (that's a quests page, if interested, there's a lot of my soul!), a bit of rewards, that's an active paying player for you!")}}</li>
+              <li>{{_("haha cases. Balancing the costs, chances to get an item, that's some cool basic math stuff! There's not much I can say about random drops, it's a pretty straightforward process. But yup, I have some experience with this line of work too.")}}</li>
+            </ul>
+            <p>{{_("On the other hand, I truly despise some donate strategies. No, it brings money, but sometimes it is ABSOLUTELY AWFUL. Nah dudes, I ain't making a ten year old pay a hundred bucks stolen off his mother. Had this experience, saw our team's conversation with his mother. Felt awful")}}</p>
+            <p>{{_("My main focus while working on increasing gross income features is balance. This thin line, not a goddamn pay-to-win, but not a monastery. Games were created for people to enjoy them. Paying a few (maybe more) bucks to give a big 'thank you' to the team is great. Just remember, there are casinos in real life, don't become a virtual one.")}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="questsModal" tabindex="-1" aria-labelledby="questsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="questsModalLabel">{{_("do something snake!")}}</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>{{_("Even if there's nothing to do sometimes, player could be held for some more of that sweet session length metric. Just give him some solo (or not) quests!")}}</p>
+            <p>{{_("Daily quests is one of my first features that went into production. Truly, I was proud of myself that day! And still am. That was kinda sloppy, we had to fix some mistakes first day (QA is important, fellas!), but we've managed to complete our objective. Covering the whole game with small tasks, some can be completed even without thinking of them. We all know, if you complete one, you gotta finish them all. Actually, this feature was such a meme potential. Surely, that came true! Almost every quest name was some kind of a meme haha. Some are still known to mass public, some were forgotten a long time ago. The only disappointment was the announcement. Our secret three-month streak was just published, that was a huge fail. Though, I'm still getting sentimental about this thing haha")}}</p>
+            <p>{{_("Had some time working with quest lines for different types of players (have you found my factions page?). A quick 'welcome to our game' quest, where we show some core features, mostly a guide through your first day. 'Do *action* N times' is a last resort quest. Yeah, it's not a bad thing to hold player at some feature until they understand its basics, but I've seen a quest like 'collect 150 seeds'. Every action lasted 10-15 seconds, so you had to sit 20-30 minutes clicking two keys. My favorite approach to quests is giving some condition, e.g. 'Capture the castle without using any healing items', 'Give a tip to the taxi driver'. Yup, it's a one time thing, but the supposed castle can make players do it a few times to suit the condition. Tipping to the taxi drives requires you to use a taxi, interact with another player and move somewhere else. Easy, but trust me, it sounds more interesting than 'Drive the taxi 3 times' for the player.")}}</p>
+            <p>{{_("I truly enjoy quests of any type, it's an easy way to fill the player in some basic concepts or give him something to do. Just show that your project has some soul. And damn, don't make them grind :(")}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="soloModal" tabindex="-1" aria-labelledby="soloModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="soloModalLabel">{{_("we all need some time alone...")}}</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>{{_("Solo activities are cool too. Talking about online games now. I have one rule - surely, it's a solo minigame, but the player shouldn't feel himself lonely. There's always somebody close, there quick small interactions can make any activity much more interesting! Let me tell about a couple of my projects here.")}}</p>
+            <p>{{_("A very casual bus-driving job. As a former ETS enjoyer I understand the pleasure, but casual players can get tired of this stuff pretty quickly. Let's give a bit more interactivity. Obviously, almost nobody would visit this lonely bus driver, making his money driving in circles. Some interactive bus stops will attract attention of players. Let them use these stops as in-game Google Maps. Now players know that these mysterious bus drivers do indeed exist. They take a bus and see the ability to choose any bus stop on this route to get off. The driver just gets a notification, no need for unwanted interactions here. Sometimes these small moments for unique players fully justify the production cost.")}}</p>
+            <p>{{_("A bit easier now. Remember all these activities which look very-very boring? Fishing, for example. Let's have a fishing minigame! Not a 'Fishing Simulator'-esque, just something simple to drop a few hours after a long day. Some fishing items - great! Give a small competition between players (like a really friendly one) to that - everyone loves a competition! A bit of a skill system and that's all players need for such a simple activity.")}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="factionsModal" tabindex="-1" aria-labelledby="factionsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="factionsModalLabel">{{_("... and some time together")}}</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body"><p>{{_("Let's have a little monologue of mine about getting players together. Factions, of course, the oldest trick in the book! It happens that I have something to say about these mechanics too.")}}</p>
+            <p>{{_("In a project based on human interaction, you need a strong leader for a faction. Sometimes that's a huge problem. It's hard to control absolutely random people, you know. The only way for project staff to keep it cool is to eliminate these players or give them something to do. Interesting features attract anyone.")}}</p>
+            <p>{{_("Basic concept, cops and robbers. Seems enough for some time, but the time this concept becomes boring will surely come and players will start ruining others' gameplay in search of something interesting. Give these cops and robbers some more functionality against each other. Let cops be able to trace criminals with some counter-feature like signal jamming from the criminals. Criminals can raid cops for a quick interaction and to steal their weaponry. It's risky coming right at enemy's base, but it's a rewarding process. Here you go, a very simple concept gets a cool feature to allow people enjoy this. Bored again? Add one more faction from each side - army and mafia. Even the simplest concept can be evolved into something really complex.")}}</p>
+            <p>{{_("Alright, say it's pretty hard to keep updating this system. Just give players ability to create their own factions. People are pretty interesting, they'll form up a conflict by themselves. Give them a base, something to do, they'll be happy to have some fun!")}}</p>
+            <p>{{_("Actually, talking about both of these concepts, I've taken part in a project where both ideas reached production. A simple cops and robbers idea was taken to more than ten different factions. On the other hand, unofficial factions were forming with our attempts to support this feature. Trust me, these concepts work great together!")}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          <div class="desc-overlay" id="Professional">
-            <div class="desc-wrapper">
-              <h2>{{_("why you should hire me")}}</h2><a class="desc-close" href="#">&times;</a>
-              <div class="desc-content">
-                <div class="desc-textbox">
-                  <p>{{_("So, I've been working as a game-designer in balance and features for the last three years. My main sphere is MMORPG games with an emphasis on simulating some real-life activities. Mostly aiming to continue working with projects aimed to let people interact in virtual spaces.")}}</p>
-                  <p>{{_("Spent some time in indie studios, had a bit of experience in casual mobile games. Sometimes I take part in consulting indie developers and small studios, mostly from my area of interest.")}}</p>
-                  <p>{{_("Was working on features from idea to product release with product managers, developers and designers. Have basic knowledge of the idea of analytics. Had been working with a couple game-dev analytics. Gotta say honestly, a bit rusty, but nothing that ten minutes in google can't fix")}}</p>
-                  <p>{{_("Currently working on a pet-project in Unreal Engine 4. Playing with some third-person shooter concepts.")}}</p>
-                  <p>{{_("If you want to know more, there's a small clicker game somewhere in this CV. It's more of my personal experience with some feautures. Have fun!")}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="desc-overlay" id="Personal">
-            <div class="desc-wrapper">
-              <h2>{{_("i am interesting")}}</h2><a class="desc-close" href="#">&times;</a>
-              <div class="desc-content">
-                <div class="desc-textbox">
-                  <figure class="desc-image">
-                    <img src="{{ url_for('static', filename='img/me.jpeg') }}" style="width:300px;height:300px;">
-                   <figcaption class="desc-caption">"{{_("that's literally me")}}"</figcaption>
-                  </figure>
-                  <p>{{_("Name's Oleg, living in ")}} <s>{{_("constant pain")}}</s>{{_(" Russia for the most part of my 20-year life. Majoring in Computer Science at Saint-Petersburg State University, left Moscow for this beautiful city.")}}</p>
-                  <p>{{_("I was playing computer games since childhood, but found myself in lots of different places. Favorite hobby's cooking, I've been learning to cook since the age of 14. Also I've been studying massage practices from all over the world (mostly Thailand and Caribbean). Two years of mixing drinks, two of my absolute favorites are white russian and cuba libre. If you're not an HR or at least a friendly one, my doors are always open. Always can let you cry on my shoulder, my bros.")}}</p>
-                  <p>{{_("Sounds stereotypical, but I enjoy travelling with 20+ countries on my list. Gotta hit it up to 193 if our borders open sometimes..")}}</p>
-                  <p>{{_("Wow, an interesting fact! I'm fluent in Russian. Who could've guessed... I guess I can also make up a few sentences in English. Was trying to learn French, but my max is bumming a cigarette :(")}}</p>
-                  <p>{{_("If you're an HR looking at another CV, gotta give you something, right? Everyone is writing about their personal qualities, so here we go")}}</p>
-                  <ul>
-                    <li>{{_("Friendly and easy to get on with, I guess. Have lots of experience talking to people, I kinda like it... ")}}</li>
-                    <li>{{_("Fast learner. Just take a look at this CV, I have one night of experience in web development. At least it hasn't broken yet")}}</li>
-                    <li>{{_("Stress tolerance. Perhaps. We all experience stress in our own ways. Can't deny I have lots of stressful things around me, but I can live with that")}}</li>
-                    <li>{{_("Initiative, but that's certainly a bad trait sometimes. Don't do extra work if nobody gives a shit, that's bad for your mental health, fellas!")}}</li>
-                    <li>{{_("I am certainly a team person. As a member, as a leader, you name it. People with the same goal always give you extra determination")}}</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="desc-overlay" id="Contacts">
-            <div class="desc-wrapper">
-              <h2>{{_("i'll answer you immediately")}}</h2><a class="desc-close" href="#">&times;</a>
-              <div class="desc-content">
-                <div class="desc-textbox">
-                  <p>
-                    <img src="{{ url_for('static', filename='img/telegram.png') }}" style="width:20px;height:20px;">
-                     telegram - <a href="tg://resolve?domain=smmac72">@smmac72</a>
-                  </p>
-                  <p>
-                    <img src="{{ url_for('static', filename='img/mail.png') }}" style="width:20px;height:20px;">
-                     {{_("email")}} - <a href="mailto:smmac072@gmail.com">smmac072@gmail.com</a>
-                  </p>
-                  <p>
-                    <img src="{{ url_for('static', filename='img/vk.png') }}" style="width:20px;height:20px;">
-                     VK - <a href="https://vk.com/smmac72">@smmac72</a>
-                  </p>
-                  <p>{{_("please don't call me in telegram in 3am, i'm tilting. cheers!")}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="desc-overlay" id="Documentation">
-            <div class="desc-wrapper">
-              <h2>{{_("this feature will work. probably.")}}</h2><a class="desc-close" href="#">&times;</a>
-              <div class="desc-content">
-                <div class="desc-textbox">
-                  <p>{{_("That's my base and ABSOLUTELY favorite thing to do. There's actually not much to say, you get your assignment from the product manager or your lead, look at your project in search of some point you can start from, then you create your masterpiece! I have experience in working on completely new features, updating old ones and covering both of these types with documentation. The only thing I'm gonna show is my own documentation structure. Everyone has one, sometimes it's something given by the your team, in other cases you form the rules all by yourself. So here's mine!")}}</p>
-                  <ul>
-                    <li>{{_("<b>Feature name</b> || Cool name is half of your job done")}}</li>
-                    <li>{{_("<b>Short description</b> || Just a few sentences about functionality")}}</li>
-                    <li>{{_("<b>Target audience</b> || Think about caterogies of players who need this mechanic")}}</li>
-                    <li>{{_("<b>Feature target</b> || Now understand what this feature can do for these players")}}</li>
-                    <li>{{_("<b>Targeted metrics</b> || I usually have three types of features - making gameplay richer, monetization stuff and keeping the engagement of your project high")}}</li>
-                    <li>{{_("<b>Long description</b> || That's like a short description, but a long one! Get every element of your feature, try to understand every condition, work with every case. Rich feature coverage in your documentation is the main part of your success!")}}</li>
-                    <li>{{_("<b>Balance</b> || Don't keep your numbers in the description. Just refer to this paragraph, so it's easier to keep and edit everything number-related")}}</li>
-                    <li>{{_("<b>Design stuff</b> || Mostly mockups of UI and 3D (or 2D, but I've never worked with two-dimensional worlds in games). Explain what you need from visuals.")}}</li>
-                  </ul>
-                  <p>{{_("I've developed this easy structure, but I'm willing to move over to other documentation formats if needed. Don't forget, documentation is half of the feature, make it a great half!")}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="desc-overlay" id="Weapons">
-            <div class="desc-wrapper">
-              <h2>{{_("war crimes are better with some friends!")}}</h2><a class="desc-close" href="#">&times;</a>
-              <div class="desc-content">
-                <div class="desc-textbox">
-                  <p>{{_("Ok, that's a page of mostly me trying to understand shooters. Guns are cool because of the movie culture, so people love them. I've taken part in two weapon-based features.")}}</p>
-                  <p>{{_("First one way quite easy, that's a faction stuff (link somewhere in my CV). Balance a few weapons, give them a reasonable cost and ways of getting your hands on them. A bit of a number tinkering. What can be better? I absolutely love it!")}}</p>
-                  <p>{{_("Now onto some complex stuff. A well crafted system with lots of behaviorally different weapons. Attachments, upgrade, gameplay features based on interaction between players via weapons. Awesome soft currency sink. Was one of my favorite features until most of it became based on the hard currency. Felt bad. So much revenue in day1, I even couldn't upgrade one weapon to its max level, there was less hard currency on my test accounts.")}}</p>
-                  <p>{{_("That's just one way to let people interact with each other. And surely, it's a fun way! Current generation grew up on shooters, we're kinda used to instinctively pressing LMB to shoot and raging on skilled opponents.")}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="desc-overlay" id="Economy">
-            <div class="desc-wrapper">
-              <h2>{{_("balancing the most broken")}}</h2><a class="desc-close" href="#">&times;</a>
-              <div class="desc-content">
-                <div class="desc-textbox">
-                  <p>{{_("I love money! I mean soft currency, which is always losing its cost. I'm no economist, but this process can be slowed down a little. Perhaps.")}}</p>
-                  <p>{{_("Actually, that was my last job and.. damn, that was a really long journey for me. I've been fiddling with almost every in-game system, the economy there went down really bad.")}}</p>
-                  <p>{{_("First of all, you gotta isolate the whole economical system. There's already lots of sort currency there, won't be a problem. Just stop introducing more money to this poor economy :(. Some players were getting money from the system? Create an in-game fund, like a government treasury, let people pay taxes. The only way to introduce more money is your donate system. And trust me, after a while it'll be a blessing for your paying playerbase.")}}</p>
-                  <p>{{_("Alright, now onto player earnings. Dive in your legacy mechanics, fiddle with them for some time. Perhaps you have a poorly balanced activity from the past. Don't lower the payouts massively, nobody likes that. Just bring everything to 'I guess that's ok' level.")}}</p>
-                  <p>{{_("Now some gold sinks, of course. Let people buy a few unique items for sort currency. Give 'em lots of small money sinks. That's a long process, but your economy should stabilize at least a little. No more new soft currency, everything's exchanged between players. God bless American Euro!")}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="desc-overlay" id="Donate">
-            <div class="desc-wrapper">
-              <h2>{{_("mom can I get 20 bucks")}}</h2><a class="desc-close" href="#">&times;</a>
-              <div class="desc-content">
-                <div class="desc-textbox">
-                  <figure class="desc-image">
-                    <img src = "{{ url_for('static', filename='img/pic-donate.webp') }}" style="width:450px;height:300px;"/>
-                   <figcaption class="desc-caption">"and you bring me more meth?"</figcaption>
-                  </figure>
-                  <p>{{_("Wanna lead a prosperous project? Make your playerbase pay you for virtual images! The more they pay, the more ")}}<s>{{_("bottles of 21 year old Glenfiddich you can bring to your office!")}}</s>{{_(" you can invest back!")}}</p>
-                  <p>{{_("I've been working on a few features aimed at increasing ARPPU. Let me give you a quick tour on this")}}</p>
-                  <ul>
-                    <li>{{_("Exchanging money for in-game abilities, unique features (my absolutely favorite - ability to turn off your in-game phone in one project), skins - that's the basic stuff. One of the main problems for me was trying to find something valuable for players to be willing to donate. Exchanging real money for soft currency is easier. The only question - will your economical system hold?")}}</li>
-                    <li>{{_("Constant monetization on sticky players. The concept of a battlepass is one of the best inventions in game-dev history. Player gives you money to play even more?. Damn, that's hot! Give them some tasks (that's a quests page, if interested, there's a lot of my soul!), a bit of rewards, that's an active paying player for you!")}}</li>
-                    <li>{{_("haha cases. Balancing the costs, chances to get an item, that's some cool basic math stuff! There's not much I can say about random drops, it's a pretty straightforward process. But yup, I have some experience with this line of work too.")}}</li>
-                  </ul>
-                  <p>{{_("On the other hand, I truly despise some donate strategies. No, it brings money, but sometimes it is ABSOLUTELY AWFUL. Nah dudes, I ain't making a ten year old pay a hundred bucks stolen off his mother. Had this experience, saw our team's conversation with his mother. Felt awful")}}</p>
-                  <p>{{_("My main focus while working on increasing gross income features is balance. This thin line, not a goddamn pay-to-win, but not a monastery. Games were created for people to enjoy them. Paying a few (maybe more) bucks to give a big 'thank you' to the team is great. Just remember, there are casinos in real life, don't become a virtual one.")}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="desc-overlay" id="Quests">
-            <div class="desc-wrapper">
-              <h2>{{_("do something snake!")}}</h2><a class="desc-close" href="#">&times;</a>
-              <div class="desc-content">
-                <div class="desc-textbox">
-                  <p>{{_("Even if there's nothing to do sometimes, player could be held for some more of that sweet session length metric. Just give him some solo (or not) quests!")}}</p>
-                  <p>{{_("Daily quests is one of my first features that went into production. Truly, I was proud of myself that day! And still am. That was kinda sloppy, we had to fix some mistakes first day (QA is important, fellas!), but we've managed to complete our objective. Covering the whole game with small tasks, some can be completed even without thinking of them. We all know, if you complete one, you gotta finish them all. Actually, this feature was such a meme potential. Surely, that came true! Almost every quest name was some kind of a meme haha. Some are still known to mass public, some were forgotten a long time ago. The only disappointment was the announcement. Our secret three-month streak was just published, that was a huge fail. Though, I'm still getting sentimental about this thing haha")}}</p>
-                  <p>{{_("Had some time working with quest lines for different types of players (have you found my factions page?). A quick 'welcome to our game' quest, where we show some core features, mostly a guide through your first day. 'Do *action* N times' is a last resort quest. Yeah, it's not a bad thing to hold player at some feature until they understand its basics, but I've seen a quest like 'collect 150 seeds'. Every action lasted 10-15 seconds, so you had to sit 20-30 minutes clicking two keys. My favorite approach to quests is giving some condition, e.g. 'Capture the castle without using any healing items', 'Give a tip to the taxi driver'. Yup, it's a one time thing, but the supposed castle can make players do it a few times to suit the condition. Tipping to the taxi drives requires you to use a taxi, interact with another player and move somewhere else. Easy, but trust me, it sounds more interesting than 'Drive the taxi 3 times' for the player.")}}</p>
-                  <p>{{_("I truly enjoy quests of any type, it's an easy way to fill the player in some basic concepts or give him something to do. Just show that your project has some soul. And damn, don't make them grind :(")}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="desc-overlay" id="SoloActivities">
-            <div class="desc-wrapper">
-              <h2>{{_("we all need some time alone...")}}</h2><a class="desc-close" href="#">&times;</a>
-              <div class="desc-content">
-                <div class="desc-textbox">
-                  <p>{{_("Solo activities are cool too. Talking about online games now. I have one rule - surely, it's a solo minigame, but the player shouldn't feel himself lonely. There's always somebody close, there quick small interactions can make any activity much more interesting! Let me tell about a couple of my projects here.")}}</p>
-                  <p>{{_("A very casual bus-driving job. As a former ETS enjoyer I understand the pleasure, but casual players can get tired of this stuff pretty quickly. Let's give a bit more interactivity. Obviously, almost nobody would visit this lonely bus driver, making his money driving in circles. Some interactive bus stops will attract attention of players. Let them use these stops as in-game Google Maps. Now players know that these mysterious bus drivers do indeed exist. They take a bus and see the ability to choose any bus stop on this route to get off. The driver just gets a notification, no need for unwanted interactions here. Sometimes these small moments for unique players fully justify the production cost.")}}</p>
-                  <p>{{_("A bit easier now. Remember all these activities which look very-very boring? Fishing, for example. Let's have a fishing minigame! Not a 'Fishing Simulator'-esque, just something simple to drop a few hours after a long day. Some fishing items - great! Give a small competition between players (like a really friendly one) to that - everyone loves a competition! A bit of a skill system and that's all players need for such a simple activity.")}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="desc-overlay" id="Factions">
-            <div class="desc-wrapper">
-              <h2>{{_("... and some time together")}}</h2><a class="desc-close" href="#">&times;</a>
-              <div class="desc-content">
-                <div class="desc-textbox">
-                  <p>{{_("Let's have a little monologue of mine about getting players together. Factions, of course, the oldest trick in the book! It happens that I have something to say about these mechanics too.")}}</p>
-                  <p>{{_("In a project based on human interaction, you need a strong leader for a faction. Sometimes that's a huge problem. It's hard to control absolutely random people, you know. The only way for project staff to keep it cool is to eliminate these players or give them something to do. Interesting features attract anyone.")}}</p>
-                  <p>{{_("Basic concept, cops and robbers. Seems enough for some time, but the time this concept becomes boring will surely come and players will start ruining others' gameplay in search of something interesting. Give these cops and robbers some more functionality against each other. Let cops be able to trace criminals with some counter-feature like signal jamming from the criminals. Criminals can raid cops for a quick interaction and to steal their weaponry. It's risky coming right at enemy's base, but it's a rewarding process. Here you go, a very simple concept gets a cool feature to allow people enjoy this. Bored again? Add one more faction from each side - army and mafia. Even the simplest concept can be evolved into something really complex.")}}</p>
-                  <p>{{_("Alright, say it's pretty hard to keep updating this system. Just give players ability to create their own factions. People are pretty interesting, they'll form up a conflict by themselves. Give them a base, something to do, they'll be happy to have some fun!")}}</p>
-                  <p>{{_("Actually, talking about both of these concepts, I've taken part in a project where both ideas reached production. A simple cops and robbers idea was taken to more than ten different factions. On the other hand, unofficial factions were forming with our attempts to support this feature. Trust me, these concepts work great together!")}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-				</div>
-			</div>
-		</div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/buttons.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/modals.js') }}"></script>
   </body>
+
 	<footer>
 		{% if g.lang_code == "ru" %}
 		<a class="btn btn-dark" href="{{ url_for(request.endpoint, lang_code='en') }}" role="button">en</a>

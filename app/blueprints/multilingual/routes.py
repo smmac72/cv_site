@@ -1,7 +1,7 @@
 from flask import (render_template, Blueprint, g, redirect,
                    request, current_app, abort, url_for)
 from flask_babel import _
-from app import app
+from app import application
 
 multilingual = Blueprint('multilingual', __name__,
                          template_folder='templates', url_prefix='/<lang_code>')
@@ -20,7 +20,7 @@ def pull_lang_code(endpoint, values):
 @multilingual.before_request
 def before_request():
     if g.lang_code not in current_app.config['LANGUAGES']:
-        adapter = app.url_map.bind('')
+        adapter = application.url_map.bind('')
         try:
             endpoint, args = adapter.match(
                 '/en' + request.full_path.rstrip('/ ?'))

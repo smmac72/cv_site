@@ -1,6 +1,6 @@
 const starButtons = document.querySelectorAll(".quest-star");
 const menuButtons = document.querySelectorAll(".menu-item");
-const closeButtons = document.querySelectorAll(".desc-close")
+const modals = document.querySelectorAll(".modal")
 
 const lennyfaces = ["( ͡° ͜ʖ ͡°)", "( ͡° ل͜ ͡°)", "( ° ͜ʖ °)", "(˵ ͡° ͜ʖ ͡°˵)", "( ͠° ͟ʖ ͠°)",
                     "( ͡° ͜ʖ ͡ – ✧)", "( ͠° ͟ ͜ʖ ͡ ͠°)", "(✿◠‿◠)", "(˵ ͡o ͜ʖ ͡o˵)", "( ͡~ ͜ʖ ͡°)",
@@ -47,12 +47,7 @@ var disableText = function() {
     }
 };
 
-for (var i = 0; i < starButtons.length; i++) {
-    starButtons[i].addEventListener('click', enableText, false);
-}
-for (var i = 0; i < menuButtons.length; i++) {
-    menuButtons[i].addEventListener('click', enableText, false);
-}
-for (var i = 0; i < closeButtons.length; i++) {
-    closeButtons[i].addEventListener('click', disableText, false);
+for (var i = 0; i < modals.length; i++) {
+    modals[i].addEventListener('show.bs.modal', enableText, false);
+    modals[i].addEventListener('hide.bs.modal', disableText, false);
 }
