@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: @smmac72\n"
-"POT-Creation-Date: 2022-11-04 00:37+0300\n"
+"POT-Creation-Date: 2023-02-08 12:09+0300\n"
 "PO-Revision-Date: 2022-11-02 14:07+0300\n"
 "Last-Translator: zeromac\n"
 "Language: ru\n"
@@ -32,7 +32,7 @@ msgid "zeromac | smoking room"
 msgstr "zeromac | курилка"
 
 #: app/blueprints/multilingual/templates/multilingual/guest.html:55
-#: app/blueprints/multilingual/templates/multilingual/index.html:151
+#: app/blueprints/multilingual/templates/multilingual/index.html:152
 msgid "smoking room"
 msgstr "курилка"
 
@@ -125,6 +125,17 @@ msgstr ""
 
 #: app/blueprints/multilingual/templates/multilingual/index.html:97
 msgid ""
+"Spent this January making a small video about rebalance in game economy. "
+"This was a nightmare, but I kinda liked doing it. You're free to check it"
+" out"
+msgstr "Провел этот январь за производством небольшого видео по ребалансу экономики в одной игрушке. Однако, это был кошмар, но мне понравилось. Как говорится, you're free to check it out"
+
+#: app/blueprints/multilingual/templates/multilingual/index.html:97
+msgid "click"
+msgstr "клик сюда"
+
+#: app/blueprints/multilingual/templates/multilingual/index.html:98
+msgid ""
 "If you want to know more, there's a small clicker game somewhere in this "
 "CV. It's more of my personal experience with some feautures. Have fun!"
 msgstr ""
@@ -132,25 +143,26 @@ msgstr ""
 "приведет к моему какому-то личному опыту работы с различными фичами. Have"
 " fun!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:106
+#: app/blueprints/multilingual/templates/multilingual/index.html:107
 msgid "i am interesting"
 msgstr "я честно интересный!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:112
+#: app/blueprints/multilingual/templates/multilingual/index.html:113
 msgid "that's literally me"
 msgstr "это я!!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:114
+#: app/blueprints/multilingual/templates/multilingual/index.html:115
 msgid "Name's Oleg, living in "
 msgstr "По некому стечению обстоятельств меня зовут Олег, живу в "
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:114
+#: app/blueprints/multilingual/templates/multilingual/index.html:115
 msgid "constant pain"
 msgstr "постоянной боли"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:114
+#: app/blueprints/multilingual/templates/multilingual/index.html:115
+#, fuzzy
 msgid ""
-" Russia for the most part of my 20-year life. Majoring in Computer "
+" Russia for the most part of my 21-year life. Majoring in Computer "
 "Science at Saint-Petersburg State University, left Moscow for this "
 "beautiful city."
 msgstr ""
@@ -158,25 +170,15 @@ msgstr ""
 " Программная Инженерия, приехал сюда из Москвы ради этого прекрасного "
 "города!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:115
+#: app/blueprints/multilingual/templates/multilingual/index.html:116
 msgid ""
 "I was playing computer games since childhood, but found myself in lots of"
 " different places. Favorite hobby's cooking, I've been learning to cook "
-"since the age of 14. Also I've been studying massage practices from all "
-"over the world (mostly Thailand and Caribbean). Two years of mixing "
-"drinks, two of my absolute favorites are white russian and cuba libre. If"
-" you're not an HR or at least a friendly one, my doors are always open. "
-"Always can let you cry on my shoulder, my bros."
-msgstr ""
-"С самого детства играл в компьютерные игрушки, но нашел себя в куче "
-"разных вещей. Любимое хобби - кулинарные штуки. Учился готовить лет с 14."
-" Умею в массаж, изучал практики из совершенно разных стран (но в основном"
-" Таиланд и Карибы). Два года барного опыта привели к двум любимым "
-"коктейлям - белый русский и куба либре. Если вы не мой рекрутер, или "
-"очень дружелюбный рекрутер, мои двери всегда открыты, и мне можно "
-"поплакаться или посидеть вместе за пивом!"
+"since the age of 14, mostly working with Asian food. Can mix up a drink "
+"for you!"
+msgstr "Играю в компьютерные игрушки с такого детства, что уже не помню его. Однако, нашел себя в множестве разных вещей. Любимая из них - готовка, которой занимаюсь лет с 14. В основном занимаюсь азиатской кухней. А еще могу смешать хороший коктейль!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:116
+#: app/blueprints/multilingual/templates/multilingual/index.html:117
 msgid ""
 "Sounds stereotypical, but I enjoy travelling with 20+ countries on my "
 "list. Gotta hit it up to 193 if our borders open sometimes.."
@@ -185,7 +187,7 @@ msgstr ""
 "счету более 20 стран, но если границы снова откроют, буду добиваться всех"
 " 193 стран в своем чеклисте!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:117
+#: app/blueprints/multilingual/templates/multilingual/index.html:118
 msgid ""
 "Wow, an interesting fact! I'm fluent in Russian. Who could've guessed... "
 "I guess I can also make up a few sentences in English. Was trying to "
@@ -195,7 +197,7 @@ msgstr ""
 "подтверждение хаха), изучал его примерно 15 лет. Пытался выучить "
 "французский, но дальше стреляния сигарет на улицах Парижа не ушло :("
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:118
+#: app/blueprints/multilingual/templates/multilingual/index.html:119
 msgid ""
 "If you're an HR looking at another CV, gotta give you something, right? "
 "Everyone is writing about their personal qualities, so here we go"
@@ -203,7 +205,7 @@ msgstr ""
 "Если это читает рекрутер, мне нужно что-то дать, да? Все пишут про свои "
 "персональные качества, почему бы мне не сделать так же"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:120
+#: app/blueprints/multilingual/templates/multilingual/index.html:121
 msgid ""
 "Friendly and easy to get on with, I guess. Have lots of experience "
 "talking to people, I kinda like it... "
@@ -211,7 +213,7 @@ msgstr ""
 "Дружелюбный и вообще комфортный человек, вероятно. Много общаюсь с "
 "людьми, люблю это делать всей душой"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:121
+#: app/blueprints/multilingual/templates/multilingual/index.html:122
 msgid ""
 "Fast learner. Just take a look at this CV, I have one night of experience"
 " in web development. At least it hasn't broken yet"
@@ -219,7 +221,7 @@ msgstr ""
 "Быстро обучающийся. Можно просто глянуть на все мое резюме, которое было "
 "написано за ночь опыта в веб-разработке. Хотя бы держится"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:122
+#: app/blueprints/multilingual/templates/multilingual/index.html:123
 msgid ""
 "Stress tolerance. Perhaps. We all experience stress in our own ways. "
 "Can't deny I have lots of stressful things around me, but I can live with"
@@ -229,7 +231,7 @@ msgstr ""
 "как-то по-своему. Не могу отрицать, что стресса много, но проблем он не "
 "приносит"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:123
+#: app/blueprints/multilingual/templates/multilingual/index.html:124
 msgid ""
 "Initiative, but that's certainly a bad trait sometimes. Don't do extra "
 "work if nobody gives a shit, that's bad for your mental health, fellas!"
@@ -237,7 +239,7 @@ msgstr ""
 "Инициативность, но это иногда уж точно плохая привычка. Не "
 "перерабатывайте, солнцы :("
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:124
+#: app/blueprints/multilingual/templates/multilingual/index.html:125
 msgid ""
 "I am certainly a team person. As a member, as a leader, you name it. "
 "People with the same goal always give you extra determination"
@@ -245,29 +247,29 @@ msgstr ""
 "Командный. Как член команды, как ее лидер, вообще без разницы. Люблю факт"
 " того, что люди вокруг с такой же целью дают тебе немного решительности"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:134
+#: app/blueprints/multilingual/templates/multilingual/index.html:135
 msgid "i'll answer you immediately"
 msgstr "Я постараюсь ответить!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:144
+#: app/blueprints/multilingual/templates/multilingual/index.html:145
 msgid "email"
 msgstr "Электронная почта"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:150
+#: app/blueprints/multilingual/templates/multilingual/index.html:151
 msgid "please don't call me in telegram in 3am, i'm tilting. cheers!"
 msgstr ""
 "не звоните пожалуйста в телеге в три ночи, у меня запланированный тильт. "
 "спасибо!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:151
+#: app/blueprints/multilingual/templates/multilingual/index.html:152
 msgid "if you have something to tell about me, you're welcome in our "
 msgstr "если хочется что-нибудь тут написать, добро пожаловать в раздел "
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:160
+#: app/blueprints/multilingual/templates/multilingual/index.html:161
 msgid "this feature will work. probably."
 msgstr "эта фича должна работать. вероятно."
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:164
+#: app/blueprints/multilingual/templates/multilingual/index.html:165
 msgid ""
 "That's my base and ABSOLUTELY favorite thing to do. There's actually not "
 "much to say, you get your assignment from the product manager or your "
@@ -288,17 +290,17 @@ msgstr ""
 "скажу про формат документации, который различается у проектов и отдельных"
 " геймдизайнеров. Оставлю тут свой что ли."
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:166
+#: app/blueprints/multilingual/templates/multilingual/index.html:167
 msgid "<b>Feature name</b> || Cool name is half of your job done"
 msgstr "<b>Название фичи</b> || Классное название - это половина работы!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:167
+#: app/blueprints/multilingual/templates/multilingual/index.html:168
 msgid "<b>Short description</b> || Just a few sentences about functionality"
 msgstr ""
 "<b>Краткое описание</b> || Пара предложений насчет функциональной "
 "составляющей"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:168
+#: app/blueprints/multilingual/templates/multilingual/index.html:169
 msgid ""
 "<b>Target audience</b> || Think about caterogies of players who need this"
 " mechanic"
@@ -306,13 +308,13 @@ msgstr ""
 "<b>Целевая аудитория</b> || Подумайте о типах игроков, которым нужна эта "
 "механика"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:169
+#: app/blueprints/multilingual/templates/multilingual/index.html:170
 msgid ""
 "<b>Feature target</b> || Now understand what this feature can do for "
 "these players"
 msgstr "<b>Цель</b> || А теперь осознайте, зачем она им нужна"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:170
+#: app/blueprints/multilingual/templates/multilingual/index.html:171
 msgid ""
 "<b>Targeted metrics</b> || I usually have three types of features - "
 "making gameplay richer, monetization stuff and keeping the engagement of "
@@ -321,7 +323,7 @@ msgstr ""
 "<b>Влияние на метрики</b> || Для меня самая база это три типа фичей - "
 "расширение геймплейных способностей, монетизация и удержание игроков"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:171
+#: app/blueprints/multilingual/templates/multilingual/index.html:172
 msgid ""
 "<b>Long description</b> || That's like a short description, but a long "
 "one! Get every element of your feature, try to understand every "
@@ -333,7 +335,7 @@ msgstr ""
 "вариант использования механики - главная часть успеха как в разработке, "
 "так и при выходе в прод"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:172
+#: app/blueprints/multilingual/templates/multilingual/index.html:173
 msgid ""
 "<b>Balance</b> || Don't keep your numbers in the description. Just refer "
 "to this paragraph, so it's easier to keep and edit everything number-"
@@ -342,7 +344,7 @@ msgstr ""
 "<b>Баланс</b> || Все цифры фичи идут сюда. Легче держать их в отдельном "
 "разделе для удобства редактирования"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:173
+#: app/blueprints/multilingual/templates/multilingual/index.html:174
 msgid ""
 "<b>Design stuff</b> || Mostly mockups of UI and 3D (or 2D, but I've never"
 " worked with two-dimensional worlds in games). Explain what you need from"
@@ -352,7 +354,7 @@ msgstr ""
 " либо визуальные ассеты. Тут просто можно объяснить, как должна выглядеть"
 " и функционировать визуальная часть"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:175
+#: app/blueprints/multilingual/templates/multilingual/index.html:176
 msgid ""
 "I've developed this easy structure, but I'm willing to move over to other"
 " documentation formats if needed. Don't forget, documentation is half of "
@@ -363,11 +365,11 @@ msgstr ""
 "главное, что нельзя забывать, это то, что документация - половина самой "
 "фичи, так что сделайте ее классной половиной!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:184
+#: app/blueprints/multilingual/templates/multilingual/index.html:185
 msgid "war crimes are better with some friends!"
 msgstr "Военные преступления веселее с друзьями!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:188
+#: app/blueprints/multilingual/templates/multilingual/index.html:189
 msgid ""
 "Ok, that's a page of mostly me trying to understand shooters. Guns are "
 "cool because of the movie culture, so people love them. I've taken part "
@@ -377,7 +379,7 @@ msgstr ""
 "стрелять это круто и всем нравится. Я как раз поучаствовал в разработке "
 "пары фичей, ориентированных на пострелять."
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:189
+#: app/blueprints/multilingual/templates/multilingual/index.html:190
 msgid ""
 "First one way quite easy, that's a faction stuff (link somewhere in my "
 "CV). Balance a few weapons, give them a reasonable cost and ways of "
@@ -390,7 +392,7 @@ msgstr ""
 "их добычи. В основном поиграться с числами, а разве не это самое "
 "классное!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:190
+#: app/blueprints/multilingual/templates/multilingual/index.html:191
 msgid ""
 "Now onto some complex stuff. A well crafted system with lots of "
 "behaviorally different weapons. Attachments, upgrade, gameplay features "
@@ -408,7 +410,7 @@ msgstr ""
 "в день выхода в прод, хотя я на тестах даже не мог себе с нарисованной "
 "хардой позволить последний уровень апгрейда."
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:191
+#: app/blueprints/multilingual/templates/multilingual/index.html:192
 msgid ""
 "That's just one way to let people interact with each other. And surely, "
 "it's a fun way! Current generation grew up on shooters, we're kinda used "
@@ -419,11 +421,11 @@ msgstr ""
 " и мы как-то уже привыкли инстинктивно нажимать ЛКМ для выстрела, а потом"
 " рейджить на скилловых оппонентов."
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:200
+#: app/blueprints/multilingual/templates/multilingual/index.html:201
 msgid "balancing the most broken"
 msgstr "балансим самое сломанное"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:204
+#: app/blueprints/multilingual/templates/multilingual/index.html:205
 msgid ""
 "I love money! I mean soft currency, which is always losing its cost. I'm "
 "no economist, but this process can be slowed down a little. Perhaps."
@@ -432,7 +434,7 @@ msgstr ""
 "сообществе игроков. Я конечно не экономист, но вероятно этот процесс "
 "можно чуточку замедлить."
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:205
+#: app/blueprints/multilingual/templates/multilingual/index.html:206
 msgid ""
 "Actually, that was my last job and.. damn, that was a really long journey"
 " for me. I've been fiddling with almost every in-game system, the economy"
@@ -442,7 +444,7 @@ msgstr ""
 " это было долгое приключение для меня. Лез почти в каждую систему, "
 "экономика была в крайне неприятном состоянии"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:206
+#: app/blueprints/multilingual/templates/multilingual/index.html:207
 msgid ""
 "First of all, you gotta isolate the whole economical system. There's "
 "already lots of sort currency there, won't be a problem. Just stop "
@@ -459,7 +461,7 @@ msgstr ""
 "один вариант влива софты в экономику - это донат, который через некоторое"
 " время наберет обороты как никогда!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:207
+#: app/blueprints/multilingual/templates/multilingual/index.html:208
 msgid ""
 "Alright, now onto player earnings. Dive in your legacy mechanics, fiddle "
 "with them for some time. Perhaps you have a poorly balanced activity from"
@@ -472,7 +474,7 @@ msgstr ""
 "время этим заняться. Конечно не надо снижать все выплаты из-за новой "
 "экономической системы, просто доведите их до уровня 'вроде ок'"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:208
+#: app/blueprints/multilingual/templates/multilingual/index.html:209
 msgid ""
 "Now some gold sinks, of course. Let people buy a few unique items for "
 "sort currency. Give 'em lots of small money sinks. That's a long process,"
@@ -484,11 +486,11 @@ msgstr ""
 "айтемов, загружаем кучу мелких сливов. Это долгий процесс, но экономика "
 "хоть чуточку стабилизируется. Господь благослави гривны!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:217
+#: app/blueprints/multilingual/templates/multilingual/index.html:218
 msgid "mom can I get 20 bucks"
 msgstr "ма, а можно на покушать кинуть?"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:225
+#: app/blueprints/multilingual/templates/multilingual/index.html:226
 msgid ""
 "Wanna lead a prosperous project? Make your playerbase pay you for virtual"
 " images! The more they pay, the more "
@@ -496,15 +498,15 @@ msgstr ""
 "Хочешь вести процветающий проект? Заставь игроков платить за картинки! "
 "Больше они платят, больше "
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:225
+#: app/blueprints/multilingual/templates/multilingual/index.html:226
 msgid "bottles of 21 year old Glenfiddich you can bring to your office!"
 msgstr "бутылок Гленфиддика 21 лет выдержки можно принести в офис!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:225
+#: app/blueprints/multilingual/templates/multilingual/index.html:226
 msgid " you can invest back!"
 msgstr " можно вложить обратно в свой проект!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:226
+#: app/blueprints/multilingual/templates/multilingual/index.html:227
 msgid ""
 "I've been working on a few features aimed at increasing ARPPU. Let me "
 "give you a quick tour on this"
@@ -512,7 +514,7 @@ msgstr ""
 "Я работал над несколькими монетизационными фичами. Давайте тут тоже "
 "быстренько пройдемся"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:228
+#: app/blueprints/multilingual/templates/multilingual/index.html:229
 msgid ""
 "Exchanging money for in-game abilities, unique features (my absolutely "
 "favorite - ability to turn off your in-game phone in one project), skins "
@@ -528,7 +530,7 @@ msgstr ""
 "перевод харды в софту, остается один вопрос - выживет ли игровая "
 "экономика?"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:229
+#: app/blueprints/multilingual/templates/multilingual/index.html:230
 msgid ""
 "Constant monetization on sticky players. The concept of a battlepass is "
 "one of the best inventions in game-dev history. Player gives you money to"
@@ -542,7 +544,7 @@ msgstr ""
 "если не видели, рекомендую! там много души излито хаха), еще наград и вот"
 " - образцовый платящий игрок!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:230
+#: app/blueprints/multilingual/templates/multilingual/index.html:231
 msgid ""
 "haha cases. Balancing the costs, chances to get an item, that's some cool"
 " basic math stuff! There's not much I can say about random drops, it's a "
@@ -553,7 +555,7 @@ msgstr ""
 "хорошо. Я не знаю, что можно написать насчет этого формата, это "
 "достаточно прямолинейный процесс. Но да, у меня есть опыт и в этом тоже!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:232
+#: app/blueprints/multilingual/templates/multilingual/index.html:233
 msgid ""
 "On the other hand, I truly despise some donate strategies. No, it brings "
 "money, but sometimes it is ABSOLUTELY AWFUL. Nah dudes, I ain't making a "
@@ -566,7 +568,7 @@ msgstr ""
 "пиксели спизженный у мамы косарь. Было дело, видел диалог саппорта с этой"
 " матерью. Чувствовал себя отвратительно :("
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:233
+#: app/blueprints/multilingual/templates/multilingual/index.html:234
 msgid ""
 "My main focus while working on increasing gross income features is "
 "balance. This thin line, not a goddamn pay-to-win, but not a monastery. "
@@ -580,11 +582,11 @@ msgstr ""
 "дело. Единственное, что надо помнить - казино есть в реальной жизни, не "
 "делайте еще одно здесь :("
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:242
+#: app/blueprints/multilingual/templates/multilingual/index.html:243
 msgid "do something snake!"
 msgstr "do something snake!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:246
+#: app/blueprints/multilingual/templates/multilingual/index.html:247
 msgid ""
 "Even if there's nothing to do sometimes, player could be held for some "
 "more of that sweet session length metric. Just give him some solo (or "
@@ -593,7 +595,7 @@ msgstr ""
 "Даже если делать нечего, игрока всегда можно удержать чуточку подольше "
 "ради этих сладких метрик. Просто дайте ему квестов!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:247
+#: app/blueprints/multilingual/templates/multilingual/index.html:248
 msgid ""
 "Daily quests is one of my first features that went into production. "
 "Truly, I was proud of myself that day! And still am. That was kinda "
@@ -622,7 +624,7 @@ msgstr ""
 "стрик в 84 дня, вот это был фейл. Но все равно вспоминаю с комфортом и "
 "люблю эту фичу с:"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:248
+#: app/blueprints/multilingual/templates/multilingual/index.html:249
 msgid ""
 "Had some time working with quest lines for different types of players "
 "(have you found my factions page?). A quick 'welcome to our game' quest, "
@@ -656,7 +658,7 @@ msgstr ""
 "3 раза' (что уж таить, это был один из дейликов моих, я честно стал "
 "лучше)"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:249
+#: app/blueprints/multilingual/templates/multilingual/index.html:250
 msgid ""
 "I truly enjoy quests of any type, it's an easy way to fill the player in "
 "some basic concepts or give him something to do. Just show that your "
@@ -667,11 +669,11 @@ msgstr ""
 "Просто покажите, что вы проект с душой. Хай бох милуе, не заставляйте их "
 "гриндить :("
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:258
+#: app/blueprints/multilingual/templates/multilingual/index.html:259
 msgid "we all need some time alone..."
 msgstr "всем нужно время наедине с собой..."
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:262
+#: app/blueprints/multilingual/templates/multilingual/index.html:263
 msgid ""
 "Solo activities are cool too. Talking about online games now. I have one "
 "rule - surely, it's a solo minigame, but the player shouldn't feel "
@@ -685,7 +687,7 @@ msgstr ""
 "интеракции могут сделать все куда интереснее! Пожалуй тут время "
 "рассказать о паре моих фичей такого формата"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:263
+#: app/blueprints/multilingual/templates/multilingual/index.html:264
 msgid ""
 "A very casual bus-driving job. As a former ETS enjoyer I understand the "
 "pleasure, but casual players can get tired of this stuff pretty quickly. "
@@ -711,7 +713,7 @@ msgstr ""
 "есть другие игроки. Честно, такие маленькие моменты удовольствия "
 "оправдывают стоимость и время разработки."
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:264
+#: app/blueprints/multilingual/templates/multilingual/index.html:265
 msgid ""
 "A bit easier now. Remember all these activities which look very-very "
 "boring? Fishing, for example. Let's have a fishing minigame! Not a "
@@ -732,11 +734,11 @@ msgstr ""
 " от системы. Да и собственно все, даже такую скучную идею как рыбалку "
 "можно принести в виде расслабляющей активности тайм-киллера!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:273
+#: app/blueprints/multilingual/templates/multilingual/index.html:274
 msgid "... and some time together"
 msgstr "... и время в компании"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:276
+#: app/blueprints/multilingual/templates/multilingual/index.html:277
 msgid ""
 "Let's have a little monologue of mine about getting players together. "
 "Factions, of course, the oldest trick in the book! It happens that I have"
@@ -746,7 +748,7 @@ msgstr ""
 " же в формате фракций, старейший трюк в книге! Удивительно, но и про это "
 "я могу что-то сказать."
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:277
+#: app/blueprints/multilingual/templates/multilingual/index.html:278
 msgid ""
 "In a project based on human interaction, you need a strong leader for a "
 "faction. Sometimes that's a huge problem. It's hard to control absolutely"
@@ -761,7 +763,7 @@ msgstr ""
 "неприятных игроков, к примеру. Или завлечь их интересными фичами. Второй "
 "вариант звучит интереснее."
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:278
+#: app/blueprints/multilingual/templates/multilingual/index.html:279
 msgid ""
 "Basic concept, cops and robbers. Seems enough for some time, but the time"
 " this concept becomes boring will surely come and players will start "
@@ -787,7 +789,7 @@ msgstr ""
 "стороны - условные армии и мафии. Самый простой концепт может оказаться в"
 " будущем чем-то искренне большим и сложным."
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:279
+#: app/blueprints/multilingual/templates/multilingual/index.html:280
 msgid ""
 "Alright, say it's pretty hard to keep updating this system. Just give "
 "players ability to create their own factions. People are pretty "
@@ -800,7 +802,7 @@ msgstr ""
 "по две стороны. Дать им базу, какие-нибудь активности между собой и между"
 " этими кланами, да и пусть веселятся. А они будут!"
 
-#: app/blueprints/multilingual/templates/multilingual/index.html:280
+#: app/blueprints/multilingual/templates/multilingual/index.html:281
 msgid ""
 "Actually, talking about both of these concepts, I've taken part in a "
 "project where both ideas reached production. A simple cops and robbers "
@@ -837,4 +839,35 @@ msgstr "Скоро все будет как обычно! Надеюсь :("
 
 #~ msgid "zeromac"
 #~ msgstr "zeromac"
+
+#~ msgid ""
+#~ "I was playing computer games since "
+#~ "childhood, but found myself in lots "
+#~ "of different places. Favorite hobby's "
+#~ "cooking, I've been learning to cook "
+#~ "since the age of 14. Also I've "
+#~ "been studying massage practices from all"
+#~ " over the world (mostly Thailand and"
+#~ " Caribbean). Two years of mixing "
+#~ "drinks, two of my absolute favorites "
+#~ "are white russian and cuba libre. "
+#~ "If you're not an HR or at "
+#~ "least a friendly one, my doors are"
+#~ " always open. Always can let you "
+#~ "cry on my shoulder, my bros."
+#~ msgstr ""
+#~ "С самого детства играл в компьютерные"
+#~ " игрушки, но нашел себя в куче "
+#~ "разных вещей. Любимое хобби - кулинарные"
+#~ " штуки. Учился готовить лет с 14. "
+#~ "Умею в массаж, изучал практики из "
+#~ "совершенно разных стран (но в основном"
+#~ " Таиланд и Карибы). Два года барного"
+#~ " опыта привели к двум любимым "
+#~ "коктейлям - белый русский и куба "
+#~ "либре. Если вы не мой рекрутер, "
+#~ "или очень дружелюбный рекрутер, мои "
+#~ "двери всегда открыты, и мне можно "
+#~ "поплакаться или посидеть вместе за "
+#~ "пивом!"
 
